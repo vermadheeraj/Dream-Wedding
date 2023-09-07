@@ -1,0 +1,3040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Wedding</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="" type="image/x-icon" />
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+
+
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+
+  <style>
+    body {
+      background-color: white;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    :root {
+
+      /**
+ * colors
+ */
+
+      --sky-blue-crayola: hsl(188, 64%, 60%);
+      --raisin-black_90: hsla(240, 8%, 12%, 0.9);
+      --raisin-black-1: hsl(240, 8%, 17%);
+      --raisin-black-2: hsl(240, 8%, 12%);
+      --majorelle-blue: hsl(241, 77%, 63%);
+      --blue-ryb_80: hsla(241, 88%, 60%, 0.8);
+      --bittersweet: hsl(0, 100%, 69%);
+      --eerie-black: hsl(0, 0%, 13%);
+      --ghost-white: hsl(230, 60%, 98%);
+      --light-gray: hsl(0, 0%, 80%);
+      --slate-gray: hsl(225, 8%, 48%);
+      --cool-gray: hsl(225, 11%, 59%);
+      --gainsboro: hsl(217, 16%, 90%);
+      --mustard: hsl(47, 100%, 69%);
+      --white: hsl(0, 0%, 100%);
+      --black: hsl(0, 0%, 0%);
+      --onyx: hsl(240, 5%, 26%);
+      --jet: hsl(0, 0%, 21%);
+
+      /**
+ * gradient
+ */
+
+      --gradient: radial-gradient(ellipse at center, hsla(0, 0%, 0%, 0.25), transparent 80%);
+
+      /**
+ * typography
+ */
+
+      --ff-dm-sans: 'DM Sans', sans-serif;
+
+      --fs-1: 4rem;
+      --fs-2: 3.5rem;
+      --fs-3: 2.4rem;
+      --fs-4: 2.2rem;
+      --fs-5: 2rem;
+      --fs-6: 1.8rem;
+      --fs-7: 1.7rem;
+      --fs-8: 1.5rem;
+      --fs-9: 1.4rem;
+
+      --fw-500: 500;
+      --fw-700: 700;
+
+      /**
+ * spacing
+ */
+
+      --section-padding: 100px;
+
+      /**
+ * shadow
+ */
+
+      --shadow-1: 0px 2px 50px hsla(223, 40%, 76%, 0.3);
+      --shadow-2: 0px -2px 12px hsl(252, 29%, 93%);
+      --shadow-3: 0px 4px 4px hsla(231, 20%, 49%, 0.06);
+      --shadow-4: 0px 15px 30px hsla(210, 30%, 32%, 0.05);
+      --shadow-5: 0px 15px hsla(241, 62%, 34%, 0.04);
+
+      /**
+ * radius
+ */
+
+      --radius-8: 8px;
+      --radius-10: 10px;
+      --radius-15: 15px;
+      --radius-20: 20px;
+
+      /**
+ * transition
+ */
+
+      --transition-1: 0.25s ease;
+      --transition-2: 0.5s ease;
+      --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+      --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+    }
+
+
+
+
+
+    /*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      height: auto;
+    }
+
+    input,
+    button {
+      background: none;
+      border: none;
+      font: inherit;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    ion-icon {
+      pointer-events: none;
+    }
+
+    html {
+      font-family: var(--ff-dm-sans);
+      font-size: 10px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--slate-gray);
+      font-size: 1.6rem;
+      line-height: 1.75;
+    }
+
+    :focus-visible {
+      outline-offset: 4px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: hsl(0, 0%, 98%);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: hsl(0, 0%, 80%);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: hsl(0, 0%, 70%);
+    }
+
+
+    /*-----------------------------------*\
+#REUSED STYLE
+\*-----------------------------------*/
+
+    .container {
+      padding-inline: 15px;
+    }
+
+    .section {
+      padding-block: var(--section-padding);
+    }
+
+    .h1,
+    .h2 {
+      letter-spacing: -2px;
+    }
+
+    .h1 {
+      color: var(--black);
+      font-size: var(--fs-1);
+      line-height: 1.1;
+    }
+
+    .h2,
+    .h3 {
+      color: var(--raisin-black-1);
+    }
+
+    .h2 {
+      font-size: var(--fs-2);
+      line-height: 1.2;
+    }
+
+    .h3 {
+      font-size: var(--fs-3);
+      line-height: 1.3;
+      font-weight: var(--fw-500);
+    }
+
+    .has-before,
+    .has-after {
+      position: relative;
+      z-index: 1;
+    }
+
+    .has-before::before,
+    .has-after::after {
+      content: "";
+      position: absolute;
+    }
+
+    :is(.h1, .h2) .has-before {
+      display: inline-block;
+    }
+
+    :is(.h1, .h2) .has-before::before {
+      bottom: 8px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background-color: var(--mustard);
+      z-index: -1;
+    }
+
+    .btn {
+      max-width: max-content;
+      font-weight: var(--fw-700);
+      height: 55px;
+      display: flex;
+      align-items: center;
+      padding-inline: 50px;
+      border-radius: var(--radius-10);
+      overflow: hidden;
+      transition: var(--transition-2);
+    }
+
+    .btn::before,
+    .btn::after {
+      right: 0;
+      width: 100%;
+      height: 50%;
+      transform: scaleX(0);
+      background-color: var(--mustard);
+      z-index: -1;
+      transition: transform var(--transition-1);
+    }
+
+    .btn::before {
+      top: 0;
+      transform-origin: left;
+    }
+
+    .btn::after {
+      top: 50%;
+      transform-origin: right;
+    }
+
+    .btn:is(:hover, :focus)::before,
+    .btn:is(:hover, :focus)::after {
+      transform: scaleX(1);
+    }
+
+    .btn:is(:hover, :focus)::before {
+      transform-origin: right;
+    }
+
+    .btn:is(:hover, :focus)::after {
+      transform-origin: left;
+    }
+
+    .btn-primary {
+      background-color: var(--majorelle-blue);
+      color: var(--white);
+    }
+
+    .btn-primary:is(:hover, :focus) {
+      color: var(--raisin-black-1);
+    }
+
+    .btn-secondary {
+      background-color: var(--mustard);
+      color: var(--raisin-black-1);
+      gap: 15px;
+    }
+
+    .btn-secondary::before,
+    .btn-secondary::after {
+      background-color: var(--sky-blue-crayola);
+    }
+
+    .btn-secondary:is(:hover, :focus) {
+      color: var(--white);
+    }
+
+    .social-list {
+      display: flex;
+    }
+
+    .w-100 {
+      width: 100%;
+    }
+
+    .section-subtitle {
+      color: var(--cool-gray);
+      font-size: var(--fs-6);
+      font-weight: var(--fw-500);
+      line-height: 1.2;
+    }
+
+    .section-subtitle::before {
+      position: static;
+      width: 12px;
+      height: 12px;
+      background-color: var(--mustard);
+      display: inline-block;
+      border-radius: 50%;
+      margin-inline-end: 10px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .section-title {
+      margin-block: 30px 50px;
+    }
+
+    .grid-list {
+      display: grid;
+      gap: 30px;
+    }
+
+    .img-holder {
+      aspect-ratio: var(--width) / var(--height);
+      background-color: var(--light-gray);
+      overflow: hidden;
+    }
+
+    .img-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .has-bg-image {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+
+
+
+
+
+
+
+
+    /*-----------------------------------*\
+#SERVICE
+\*-----------------------------------*/
+
+    .service {
+      background-color: var(--ghost-white);
+    }
+
+    .service .section-title {
+      margin-block: 30px 60px;
+    }
+
+    .service-card,
+    .service .link-card {
+      padding: 45px;
+      border-radius: var(--radius-20);
+    }
+
+    .service-card {
+      height: 100%;
+      background-color: var(--white);
+      padding-block-end: 40px;
+      border-block-end: 3px solid transparent;
+      box-shadow: var(--shadow-3);
+      transition: var(--transition-1);
+    }
+
+    .service-card:is(:hover, :focus-within) {
+      border-color: hsl(var(--color));
+    }
+
+    .service-card .card-icon {
+      max-width: max-content;
+      padding: 15px;
+      border-radius: var(--radius-8);
+      background-color: hsla(var(--color), 0.15);
+      margin-block-end: 25px;
+      transition: var(--transition-2);
+    }
+
+    .service-card:is(:hover, :focus-within) .card-icon {
+      transform: rotateY(0.5turn);
+    }
+
+    .service-card .card-title {
+      transition: var(--transition-1);
+    }
+
+    .service-card .card-title:is(:hover, :focus-within) {
+      color: hsl(var(--color));
+    }
+
+    .service .link-card {
+      background-color: hsla(var(--color), 0.15);
+      text-align: center;
+    }
+
+    .service .link-card .span {
+      color: var(--raisin-black-1);
+      font-size: var(--fs-6);
+      font-weight: var(--fw-500);
+      margin-block-end: 20px;
+      transition: var(--transition-1);
+    }
+
+    .service .link-card:is(:hover, :focus) .span {
+      color: var(--majorelle-blue);
+    }
+
+    .service .link-card ion-icon {
+      color: var(--majorelle-blue);
+      font-size: 150px;
+      transform: rotate(-45deg);
+      margin: -25px auto;
+      transition: var(--transition-1);
+    }
+
+    .service .link-card:is(:hover, :focus) ion-icon {
+      color: hsl(var(--color));
+    }
+
+
+    .btn-an {
+      display: inline-block;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 18px;
+      background: #8080808c;
+      color: black;
+      border-radius: 2px;
+      font-family: serif;
+      animation-name: example;
+      position: relative;
+      animation-duration: 4s;
+      animation-delay: 2s;
+      animation-iteration-count: 3;
+    }
+
+    @keyframes example {
+      from {
+        top: 0px;
+      }
+
+      to {
+        top: 200px;
+        background-color: blue;
+      }
+    }
+
+
+
+    .containers {
+      width: 100%;
+      height: 240px;
+    }
+
+    .slider {
+      margin: 0 40px;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider .image-items {
+      height: 100%;
+    }
+
+    .slider .image-items .image {
+      height: 100%;
+    }
+
+    .slider .image-items .image img {
+      height: 100%;
+      display: block;
+      width: 100%;
+      object-fit: cover;
+
+    }
+
+    .arrowButton {
+      position: absolute !important;
+      top: 50% !important;
+      color: black !important;
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50% !important;
+      background-color: white !important;
+      padding: 10px !important;
+    }
+
+    .arrowButton.left {
+      left: 0 !important;
+    }
+
+    .arrowButton.right {
+      right: 0 !important;
+    }
+
+    .arrowButton::after {
+      font-size: 20px !important;
+    }
+
+
+
+
+
+
+
+
+    /*-----------------------------------*\
+#MEDIA QUERIES
+\*-----------------------------------*/
+
+    /**
+* responsive for large than 575px screen
+*/
+
+    @media (min-width: 575px) {
+
+      /**
+ * REUSED STYLE
+ */
+
+      .container {
+        max-width: 540px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+
+
+      /**
+ * HEADER
+ */
+
+      .header .container {
+        max-width: unset;
+      }
+
+
+
+
+      /**
+ * PROJECT
+ */
+
+      .project-card .card-content {
+        max-width: max-content;
+        width: calc(100% - 40px);
+        left: 50%;
+        right: auto;
+        padding: 50px 80px;
+        transform: translate(-50%, calc(-50% + 20px));
+      }
+
+      .project-card:is(:hover, :focus-within) .card-content {
+        transform: translate(-50%, -50%);
+      }
+
+      .project-card .card-title {
+        margin-block-end: 10px;
+      }
+
+    }
+
+
+
+
+
+    /**
+* responsive for large than 768px screen
+*/
+
+    @media (min-width: 768px) {
+
+      /**
+ * CUSTOM PROPERTY
+ */
+
+      :root {
+
+        /**
+   * typography
+   */
+
+        --fs-1: 5.5rem;
+        --fs-2: 3.8rem;
+        --fs-7: 1.8rem;
+
+        /**
+   * spacing
+   */
+
+        --section-padding: 120px;
+
+      }
+
+
+
+      /**
+ * REUSED STYLE
+ */
+
+      .container {
+        max-width: 720px;
+      }
+
+      .btn {
+        height: 60px;
+      }
+
+      .grid-list {
+        grid-template-columns: 1fr 1fr;
+      }
+
+
+
+      /**
+ * HERO
+ */
+
+      .hero .container {
+        gap: 120px;
+      }
+
+      .hero .wrapper {
+        gap: 50px;
+        margin-block-end: 60px;
+      }
+
+      .hero .social-link .span {
+        display: block;
+        font-size: var(--fs-9);
+        color: var(--raisin-black-1);
+        font-weight: var(--fw-700);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: var(--transition-2);
+      }
+
+      .hero .social-link {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: none;
+        box-shadow: none;
+      }
+
+      .hero .social-link:is(:hover, :focus) {
+        background: unset;
+        color: var(--color);
+      }
+
+      .hero .social-link:is(:hover, :focus) .span {
+        color: var(--color);
+      }
+
+
+
+      /**
+ * FEATURE
+ */
+
+      .feature-banner {
+        max-width: max-content;
+      }
+
+      .feature-list {
+        gap: 30px;
+      }
+
+      .feature-card {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 25px;
+      }
+
+      .feature-card .card-icon {
+        margin-block-end: 0;
+      }
+
+      .feature-card .card-text {
+        max-width: 32ch;
+      }
+
+
+
+      /**
+ * PROJECT
+ */
+
+      .project .grid-list>li:first-child {
+        grid-column: 1 / 3;
+      }
+
+
+
+      /**
+ * NEWSLETTER
+ */
+
+      .newsletter-form {
+        position: relative;
+      }
+
+      .email-field {
+        margin-block-end: 0;
+      }
+
+      .newsletter-form .btn-secondary {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        height: auto;
+        padding-inline: 25px;
+      }
+
+
+
+      /**
+ * BLOG
+ */
+
+      .blog-card:not(.large) {
+
+        align-items: center;
+        gap: 40px;
+      }
+
+      .blog-card:not(.large) .card-banner {
+        margin-block-end: 0;
+        flex-shrink: 0;
+      }
+
+      .blog-card .card-title {
+        --fs-4: 2.6rem;
+      }
+
+
+    }
+
+
+
+
+
+
+
+    /**
+* responsive for large than 992px screen
+*/
+
+    @media (min-width: 992px) {
+
+      /**
+ * REUSED STYLE
+ */
+
+      .container {
+        max-width: 960px;
+      }
+
+      .btn {
+        height: 70px;
+      }
+
+      .grid-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+
+
+      /**
+ * HEADER
+ */
+
+      .header {
+        padding-block-start: 47px;
+      }
+
+      .nav-open-btn,
+      .overlay,
+      .navbar .wrapper {
+        display: none;
+      }
+
+      .navbar,
+      .navbar.active {
+        all: unset;
+      }
+
+      .navbar-item:not(:last-child) {
+        border: none;
+      }
+
+      .navbar-list {
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar-link {
+        position: relative;
+        color: var(--cool-gray);
+        text-transform: capitalize;
+        font-size: unset;
+        font-weight: var(--fw-500);
+      }
+
+      .navbar-link:is(:hover, :focus) {
+        color: var(--raisin-black-1);
+      }
+
+      .navbar-link::before {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 0;
+        height: 4px;
+        border-radius: 5px;
+        background-color: var(--majorelle-blue);
+        transition: var(--transition-1);
+      }
+
+      .navbar-link:is(:hover, :focus)::before {
+        width: 100%;
+      }
+
+      .header .btn {
+        display: inline-flex;
+      }
+
+      .header .btn::before,
+      .header .btn::after {
+        background-color: var(--raisin-black-1);
+      }
+
+      .header .btn:is(:hover, :focus) {
+        color: var(--white);
+      }
+
+
+
+      /**
+ * HERO
+ */
+
+      .hero {
+        background-image: linear-gradient(to right, var(--white) 79%, var(--mustard) 79%);
+        overflow: hidden;
+      }
+
+      .hero .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .hero .wrapper {
+        flex-wrap: nowrap;
+      }
+
+      .hero .btn,
+      .hero-btn .span {
+        flex-shrink: 0;
+      }
+
+      .hero-banner {
+        margin-inline-end: -140px;
+      }
+
+
+
+      /**
+ * FEATURE
+ */
+
+      .feature .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+
+
+      /**
+ * PROJECT
+ */
+
+      .filter-btn {
+        --fs-9: 1.8rem;
+        padding: 20px 25px;
+      }
+
+
+
+      /**
+ * NEWSLETTER
+ */
+
+      .newsletter .container {
+        grid-template-columns: 1fr 0.8fr;
+        align-items: center;
+      }
+
+      .newsletter-banner {
+        order: 1;
+        margin-inline-start: auto;
+      }
+
+      .email-field {
+        min-height: 80px;
+        padding-inline: 40px;
+      }
+
+      .newsletter-form .btn-secondary {
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+      }
+
+
+
+      /**
+ * BLOG
+ */
+
+      .blog-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 70px;
+      }
+
+      .blog-list>li:first-child {
+        grid-row: 1 / 4;
+      }
+
+      .blog-card:not(.large) .wrapper {
+        gap: 10px;
+        flex-wrap: nowrap;
+        margin-block-end: 10px;
+      }
+
+      .blog-card:not(.large) .publish-date {
+        flex-shrink: 0;
+        font-size: var(--fs-9);
+        gap: 5px;
+      }
+
+      .blog-card .card-title {
+        --fs-4: 1.8rem;
+      }
+
+
+
+      /**
+ * FOOTER
+ */
+
+      .footer-top {
+        grid-template-columns: 1fr 0.5fr 0.5fr 0.9fr;
+        padding-block: 120px;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .copyright {
+        margin-block-end: 0;
+      }
+
+    }
+
+    /**
+* responsive for large than 1200px screen
+*/
+
+    @media (min-width: 1200px) {
+
+      /**
+* CUSTOM PROPERTY
+*/
+
+      :root {
+
+        /**
+* typography
+*/
+
+        --fs-1: 5.5rem;
+        --fs-2: 4.5rem;
+
+      }
+
+
+
+      /**
+* REUSED STYLE
+*/
+
+      .container {
+        max-width: 1140px;
+      }
+
+      .section-title.text-center {
+        max-width: 20ch;
+        margin-inline: auto;
+      }
+
+
+
+      /**
+* HEADER
+*/
+
+      .header .container {
+        padding-inline: 30px;
+      }
+
+      .navbar-list {
+        gap: 50px;
+      }
+
+
+
+      /**
+* HERO
+*/
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        margin-block-start: 50px;
+      }
+
+      .hero-text {
+        margin-block: 40px 45px;
+      }
+
+      .hero .wrapper {
+        margin-block-end: auto;
+      }
+
+      .hero-banner {
+        margin-inline-end: -250px;
+        min-width: max-content;
+      }
+
+
+
+      /**
+* SERVICE
+*/
+
+      .service .grid-list {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .service-card .h3 {
+        --fs-3: 2rem;
+      }
+
+      .testimonial,
+      .service {
+        min-width: calc(25% - 20px);
+        width: calc(100% - 20px);
+
+      }
+
+
+
+      /**
+* PROJECT
+*/
+
+      .filter-btn {
+        padding-inline: 40px;
+      }
+
+
+
+      /**
+* BLOG
+*/
+
+      .blog-list {
+        column-gap: 35px;
+      }
+
+      .blog-card.large {
+        padding-inline-end: 35px;
+        border-inline-end: 1px solid var(--gainsboro);
+      }
+
+      .blog-card:not(.large) .publish-date {
+        --fs-9: 1.6rem;
+      }
+
+      .blog-card:not(.large) .wrapper {
+        gap: 25px;
+        margin-block-end: 20px;
+      }
+
+      .blog-card .card-title {
+        --fs-4: 2.4rem;
+      }
+    }
+
+    .span {
+      color: #ffa500;
+      font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay" data-overlay></div>
+
+
+
+
+  <!--
+  - HEADER
+-->
+
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-facebook fa-lg"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-instagram fa-lg"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-twitter fa-lg"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-youtube fa-lg"></i>
+            </a>
+          </li>
+        </ul>
+
+        <div class="header-alert-news">
+          <p style="color: black;">
+            <b>Welcome To Dream Wedding Studio</b>
+
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <a href="#" class="header-logo"><span class="span">D</span>ream-<span
+            style="font-size: 24px; color: #ffa500;">W</span>edding
+        </a>
+
+        <div class="header-search-container">
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category">
+            <a href="index.html" class="menu-title">Home</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="services.html" class="menu-title">Events</a>
+
+            <div class="dropdown-panel">
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="photoshot.html">Engagement</a>
+                </li>
+
+
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/wedding22.JPG" alt="headphone collection" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="photoshot.html">Haldi And Mehndi</a>
+                </li>
+
+
+
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/haldi-image9.JPG" alt="men's fashion" width="250" height="80" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="photoshot.html">Pre Wedding Shot</a>
+                </li>
+
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/pre-wedding1.jpg" alt="" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="services.html">Wedding</a>
+                </li>
+
+
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/wedding1.jpg" alt="mouse collection" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="menu-category">
+            <a href="photoshot.html" class="menu-title">PhotoShot</a>
+            <!-- 
+
+                          
+                          <ul class="dropdown-list">
+                              <li class="dropdown-item">
+                                  <a href="products.html">Smartwatch</a>
+                              </li>
+                              
+                              <li class="dropdown-item">
+                                  <a href="products.html">Formal Watch</a>
+                              </li>
+                              
+                              <li class="dropdown-item">
+                                  <a href="products.html">Speakers</a>
+                              </li>
+                              
+                              <li class="dropdown-item">
+                                  <a href="products.html">headphone</a>
+                              </li>
+                          </ul>
+                      -->
+          </li>
+
+          <li class="menu-category">
+            <a href="photoshot.html" class="menu-title">Pre-Wedding</a>
+
+
+
+          </li>
+
+          <li class="menu-category">
+            <a href="contact.html" class="menu-title">CONTACT</a>
+
+
+          </li>
+
+          <li class="menu-category">
+            <a href="video.html" class="menu-title">Videography</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn " data-mobile-menu-open-btn>
+        <a href="index.html" style="color: black;"><i class="fa-solid fa-house fa-lg"></i></a>
+        <a href="index.html" style="font-size: 12px; color: black;font-weight: 700;
+  font-family: math; padding: 0; ">Home</a>
+      </button>
+
+      <button class="action">
+        <a href="services.html" style="color: black;"><i class="fa-solid fa-calendar fa-lg"></i>
+          <a href="services.html" style="font-size: 12px; color: black;font-weight: 700;
+  font-family: math; padding: 0; ">Events</a>
+      </button>
+
+      <button class="action-btn">
+
+
+        <a href="photoshot.html" style="color: black;"><i class="fa-solid fa-camera fa-lg"></i>
+          <a href="photoshot.html" style="font-size: 12px; color: black;font-weight: 700;
+  font-family: math; padding: 0; ">PhotoShot</a>
+      </button>
+
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <a href="video.html" style="color: black;"><i class="fa-solid fa-video fa-lg"></i></a>
+        <a href="" style="font-size: 12px; color: black;font-weight: 700;
+  font-family: math; padding: 0; ">videoShot</a>
+
+      </button>
+
+      <button class="action-btn">
+        <a href="contact.html" style="color: black;"><i class="fa-solid fa-address-card fa-lg"></i>
+          <a href="" style="font-size: 12px; color: black;font-weight: 700;
+  font-family: math; padding: 0; ">Contact</a>
+
+          <span class="count"></span>
+      </button>
+
+    </div>
+
+    <nav class="mobile-navigation-menu has-scrollbar " data-mobile-menu style="background: white;">
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <i class="fa-solid fa-xmark"></i>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <li class="menu-category">
+          <a href="products.html" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <a href="products.html">
+              <p class="menu-title">Men's</p>
+            </a>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"><i class="fa-solid fa-minus"></i></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list " data-accordion>
+            <li class="submenu-category">
+              <a href="products.html" class="submenu-title">Smartwatch</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="products.html" class="submenu-title">Formal Watch</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Headphones</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Speakers</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Watch</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+            <li class="panel-list-item">
+              <a href="products.html">RealMe</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Fastrack</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">BoAt</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Noise</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Apple</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Headphones</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+            <li class="panel-list-item">
+              <a href="products.html">boAt</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">RealMe</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Sony</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="#">Samsung</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="#">JBL</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <a href="contact.html">
+              <p class="menu-title">Contact</p>
+            </a>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+          </ul>
+        </li>
+
+        </div>
+    </nav>
+  </header>
+
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+
+    <!--
+      - BANNER
+    -->
+
+    <div class="banner">
+
+      <div class="container">
+
+        <div class="slider-container has-scrollbar">
+
+          <div class="slider-item">
+
+            <img src="images/shaadi2.JPG" alt="women's latest fashion sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">Weeding Shot</p>
+
+              <h2 class="banner-title">May the love and happiness
+
+
+            </div>
+
+          </div>
+
+
+
+          <div class="slider-item">
+
+            <img src="images/shaadi3.JPG" alt="women's latest fashion sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">Wedding</p>
+
+              <h2 class="banner-title">"Wishing you all of the love and happiness!"</h2>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="images/wedding-image1.jpg" alt="women's latest fashion sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle"></p>
+
+
+
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="images/wedding16.JPG" alt="women's latest fashion sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle"></p>
+
+
+
+
+            </div>
+
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+
+
+      <!--
+      - CATEGORY
+    -->
+
+      <div class="category">
+
+        <div class="container">
+
+          <div class="category-item-container has-scrollbar">
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/wedding26.jpg" alt="dress & frock" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Pre Wedding PhotoShot</h3>
+
+                  <p class="category-item-amount">(50+)</p>
+                </div>
+
+                <a href="photoshot.html" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/wedding-image2.jpg" alt="winter wear" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Wedding PhotoShot</h3>
+
+                  <p class="category-item-amount">(100+)</p>
+                </div>
+
+                <a href="photoshot.html" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/haldi-image1.JPG" alt="glasses & lens" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Haldi PhotoShot</h3>
+
+                  <p class="category-item-amount">(50+)</p>
+                </div>
+
+                <a href="photoshot.html" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/wedding10.JPG" alt="shorts & jeans" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Best Wedding PhotoShot</h3>
+
+                  <p class="category-item-amount">(84+)</p>
+                </div>
+
+                <a href="photoshot.html" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/haldi-image3.JPG" alt="t-shirts" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Mehandi</h3>
+
+                  <p class="category-item-amount">(25+)</p>
+                </div>
+
+                <a href="photoshot.html" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+      <!-- Slider Section -->
+
+      <h2 class="title">Best Couple</h2>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/wedding22.JPG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/shaadi1.JPG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/wedding24.JPG" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <br>
+
+
+      <br>
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="service" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle has-before text-center">Our Services</p>
+
+          <h2 class="h2 section-title text-center">Managing you business with our <span class="has-before">best
+              service</span></h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card" style="--color: 343, 98%, 60%">
+
+                <div class="card-icon">
+                  <img src="/images/engagement-icon.png" width="30" height="30" loading="lazy" alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Engagement Function</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 210, 100%, 53%">
+
+                <div class="card-icon">
+                  <img src="/images/service-icon-5.png" width="30" height="30" loading="lazy" alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Haldi Shot</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 17, 100%, 68%">
+
+                <div class="card-icon">
+                  <img src="/images/icons8-wedding-dress-48.png" width="30" height="30" loading="lazy"
+                    alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Pre Wedding Shot</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 267, 76%, 57%">
+
+                <div class="card-icon">
+                  <img src="/images/icons8-wedding-58.png" width="30" height="30" loading="lazy" alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Wedding shot</a>
+                </h3>
+
+              </div>
+            </li>
+
+
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      <br>
+
+      <!--
+            - PRODUCT FEATURED
+          -->
+
+      <div class="product-featured">
+
+        <h2 class="title">Cute Couple Photoshoot</h2>
+
+        <div class="showcase-wrapper has-scrollbar">
+
+          <div class="showcase-container">
+
+            <div class="showcase">
+
+              <div class="showcase-banner">
+                <img src="images/shaadi3.JPG" alt="shampoo, conditioner & facewash packs" class="showcase-img">
+              </div>
+
+              <div class="showcase-content">
+
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </div>
+
+
+
+                <p class="showcase-desc">
+                  Congratulations on your marriage and best wishes for a happy and fulfilling future.
+                </p>
+                <a href="#">
+                  <h3 class="showcase-title">Cute Couple</h3>
+                </a>
+
+
+                <button class="add-cart-btn">Rahul Weds Shivani</button>
+
+                <div class="showcase-status">
+                  <div class="wrapper">
+                    <p>
+                      already sold: <b>20</b>
+                    </p>
+
+                    <p>
+                      Team: <b>10</b>
+                    </p>
+                  </div>
+
+                  <div class="showcase-status-bar"></div>
+                </div>
+
+                <div class="countdown-box">
+
+
+                  <div class="countdown">
+
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="showcase-container">
+
+            <div class="showcase">
+
+              <div class="showcase-banner">
+                <img src="images/wedding24.JPG" alt="Rose Gold diamonds Earring" class="showcase-img">
+              </div>
+
+              <div class="showcase-content">
+
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </div>
+
+
+
+                <p class="showcase-desc">
+                  Keep love in your heart and every day will feel like today. Happy wedding day!
+                </p>
+
+                <h3 class="showcase-title">
+                  <a href="#" class="showcase-title">Cute Couple</a>
+                </h3>
+
+
+
+                <button class="add-cart-btn">Raj Weds Pihu</button>
+
+                <div class="showcase-status">
+                  <div class="wrapper">
+
+
+                    <p> Team: <b>10</b> </p>
+                  </div>
+
+                  <div class="showcase-status-bar"></div>
+                </div>
+
+                <div class="countdown-box">
+
+
+
+                  <div class="countdown">
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+      <!--
+        Frist Blog
+      -->
+
+
+      <div class="blog">
+
+        <div class="container">
+          <h2 class="title">Best Wedding PhotoShot</h2>
+
+          <div class="blog-container has-scrollbar">
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="/images/wedding7.JPG" alt="" width="300" class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Wedding PhotoShot</a>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding-image2.jpg" alt="" width="300" class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Wedding PhotoShot</a>
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding12.JPG" alt="" width="300" class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Wedding PhotoShot</a>
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding27.JPG" alt="" width="300" class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Wedding PhotoShot</a>
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding14.JPG" alt="" object-fit="contain" height="400px" width="300"
+                  class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Wedding PhotoShot</a>
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images//wedding-image2.jpg" alt="" object-fit="contain" height="400px" width="300"
+                  class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Wedding PhotoShot</a>
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding-image3.jpg" alt="" object-fit="contain" height="400px" width="300"
+                  class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Wedding PhotoShot</a>
+
+              </div>
+
+            </div>
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding-image4.jpg" alt="" object-fit="contain" height="400px" width="300"
+                  class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Wedding PhotoShot</a>
+
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+      <!--
+      - BLOG
+    -->
+
+      <div class="blog">
+
+        <div class="container">
+          <h2 class="title">Haldi PhotoShot</h2>
+
+          <div class="blog-container has-scrollbar">
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/haldi-image1.JPG" alt="" width="300" class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <a href="#">
+                  <h3 class="blog-title"></h3>
+                </a>
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/haldi-image11.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/haldi-image7.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/haldi-image12.JPG" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                  class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/haldi-image6.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/haldi-image2.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!--
+      - BLOG
+    -->
+
+      <div class="blog">
+
+        <div class="container">
+          <h2 class="title">Mehandi PhotoShot</h2>
+
+          <div class="blog-container has-scrollbar">
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/mddi5.JPG" alt="" width="300" class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Mehandi PhotoShot</a>
+
+                <a href="#">
+                  <h3 class="blog-title"></h3>
+                </a>
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/mhdi4.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Mehandi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/mhdi3.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Mehandi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/mhdi2.JPG" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                  class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Mehandi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/mhdi1.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Mehandi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/mddi5.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Mehandi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+      <!--
+      - BLOG apple 2
+    -->
+
+      <div class="blog">
+
+        <div class="container">
+          <h2 class="title">Wedding Photography Showcase</h2>
+
+          <div class="blog-container has-scrollbar">
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding22.JPG" alt="" width="300" class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Photography</a>
+
+                <a href="#">
+                  <h3 class="blog-title"></h3>
+                </a>
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding24.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Photography</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/shaadi1.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Photography</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/shaadi2.JPG" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                  class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Photography</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding15.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Photography</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding16.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Photography</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding-image1.jpg" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Photography</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/wedding29.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Photography</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/shaadi3.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Photography</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
+
+              </div>
+
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+  </main>
+
+
+  <div class="containers">
+    <div class="slider mySwiper">
+      <div class="image-items swiper-wrapper">
+        <div class="image swiper-slide">
+          <img src="./images/new-image6.jpeg" alt="" />
+        </div>
+        <div class="image swiper-slide">
+          <img src="./images/new-image2.jpeg" alt="" />
+        </div>
+        <div class="image swiper-slide">
+          <img src="./images/new-image3.jpeg" alt="" />
+        </div>
+        <div class="image swiper-slide">
+          <img src="./images/new-image4.jpeg" alt="" />
+        </div>
+        <div class="image swiper-slide">
+          <img src="./images/new-image5.jpeg" alt="" />
+        </div>
+        <div class="image swiper-slide">
+          <img src="./images/new-image6.jpeg" alt="" />
+        </div>
+        <div class="image swiper-slide">
+          <img src="./images/new-image7.jpeg" alt="" />
+        </div>
+
+        <div class="image swiper-slide">
+          <img src="./images/new-image1.jpeg" alt="" />
+        </div>
+        <div class="image swiper-slide">
+          <img src="./images/new-image6.jpeg" alt="" />
+        </div>
+        <div class="image swiper-slide">
+          <img src="./images/new-image3.jpeg" alt="" />
+        </div>
+        <div class="image swiper-slide">
+          <img src="./images/new-image5.jpeg" alt="" />
+        </div>
+      </div>
+      <div class="swiper-button-next arrowButton right"></div>
+      <div class="swiper-button-prev arrowButton left"></div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-e1450228-a8a8-4388-a2f0-284c203feb53" style="position: absolute;"></div>
+
+
+
+
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-category">
+
+      <div class="container">
+
+        <h2 class="footer-category-title">Dream-Wedding</h2>
+
+        <div class="footer-category-box">
+
+          <h3 class="category-box-title">Photoshoot :</h3>
+
+          <a href="photoshot.html" class="footer-category-link">Fashion Photoshoots</a>
+          <a href="photoshot.html" class="footer-category-link">Corporate Photoshoot</a>
+          <a href="photoshot.html" class="footer-category-link">Advertising </a>
+          <a href="photoshot.html" class="footer-category-link">Real Estate</a>
+          <a href="photoshot.html" class="footer-category-link">Lifestyle </a>
+
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Wedding Photoshoot :</h3>
+          <a href="photoshot.html" class="footer-category-link">Traditional Wedding</a>
+          <a href="photoshot.html" class="footer-category-link">Natural Wedding</a>
+          <a href="photoshot.html" class="footer-category-link">Documentary Wedding </a>
+          <a href="photoshot.html" class="footer-category-link">Vintage Style Wedding</a>
+          <a href="photoshot.html" class="footer-category-link">Film Wedding </a>
+
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Pre-Wedding Photoshoot :</h3>
+          <a href="photoshot.html" class="footer-category-link">Traditional</a>
+          <a href="photoshot.html" class="footer-category-link">Natural Pre-Wedding</a>
+          <a href="photoshot.html" class="footer-category-link">Beach Pre-Wedding </a>
+          <a href="photoshot.html" class="footer-category-link">Night Style Pre-Wedding</a>
+          <a href="photoshot.html" class="footer-category-link">Tropical Pre-Wedding </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Popular Categories</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Engagement Shot</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Haldi Shot</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Pre-Wedding Shot</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Wedding Shot</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Birthday party</a>
+          </li>
+
+        </ul>
+
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Our Studio</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery Photos</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery Album</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">10+ Terms</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">About us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Secure payment</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Home</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Events</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Pre-wedding</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Photography</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Videography</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Wedding</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              Shop No 13
+              M.P Nagar, 4602023, India
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+607936-8058" class="footer-nav-link">7470321981</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="" class="footer-nav-link">vivekmourya764@gmail.com</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="" class="footer-nav-link">Owner Is Vivek Mourya</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" style="color: white;" class="footer-nav-link">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="" alt="" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">Dream-Wedding</a> all rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <!-- bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- carousel -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      dots: false,
+      nav: true,
+      autoplay: true,
+      smartSpeed: 3000,
+      autoplayTimeout: 7000,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerGroup: 1,
+      loop: true,
+      fade: true,
+      grabCursor: true,
+      loopFillGroupWithBlank: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        500: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        868: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1000: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        1250: {
+          slidesPerView: 5,
+          spaceBetween: 30,
+        },
+      },
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('.box-carousel').slick({
+        dots: false,
+        arrows: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        prevArrow: "<button type='button' class='mission-prev-arrow'></button>",
+        nextArrow: "<button type='button' class='mission-next-arrow'></button>"
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

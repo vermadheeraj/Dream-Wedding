@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Wedding</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="" type="image/x-icon" />
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      outline: none;
+      border: none;
+      text-transform: capitalize;
+    }
+
+    html {
+
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: crimson;
+    }
+
+    html::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    body {
+      background: #ffffff;
+    }
+
+
+
+    .navbar i {
+      color: crimson;
+      padding-right: 8px;
+    }
+
+    .navbar a:hover {
+      background: crimson;
+      padding-bottom: 30px;
+    }
+
+    .navbar a:hover i {
+      color: white;
+    }
+
+    section {
+      padding: 8rem 8%;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 30px;
+      color: rgb(59, 58, 58);
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .heading span {
+      text-transform: uppercase;
+      color: crimson;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .row .info-container {
+      width: 35rem;
+      padding-top: 30px;
+      height: 450px;
+    }
+
+    .row .info-container h2 {
+      font-size: 22px;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      color: #333;
+      padding-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .row .info-container .box-container {
+      padding: 8px 0;
+    }
+
+    .row .info-container .box-container .box {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .row .info-container .box-container .box {
+      font-size: 15px;
+      color: crimson;
+    }
+
+    .row .info-container .box-container .box h3 {
+      font-size: 18px;
+      font-family: sans-serif;
+      color: black;
+      padding-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .row .info-container .box-container .box p {
+      font-size: 15px;
+      font-family: sans-serif;
+      color: gray;
+      padding-bottom: 10px;
+      font-weight: 600;
+    }
+
+    form {
+      flex: 1 1 40rem;
+      padding-top: 30px;
+    }
+
+    .inputbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    input {
+      width: 48%;
+    }
+
+    .inputbox input,
+    textarea {
+      border-radius: 5px;
+      padding: 8px 8px;
+      font-size: 12px;
+      color: white;
+      text-transform: none;
+      margin: 5px 0;
+      background: whitesmoke;
+      font-weight: bold;
+      border: none;
+    }
+
+    textarea {
+      width: 80%;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      resize: none;
+    }
+
+    .row form .btn {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 8px;
+      font-size: 18px;
+      background: crimson;
+      color: white;
+      border-radius: 5px;
+      font-family: serif;
+      cursor: pointer;
+    }
+
+    .share {
+      padding-top: 20px;
+    }
+
+    .online-icon img {
+      height: 35px;
+      padding: 0 5px;
+    }
+
+    .step-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 8px;
+    }
+
+    .step-container .step {
+      background: whitesmoke;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid black;
+      box-shadow: 8px 5px rgba(0, 0, 0, 0.1);
+      flex: 1 1 10rem;
+      align-items: center;
+    }
+
+    .step-container .step span {
+      font-size: 22px;
+      color: #ee0548;
+      font-weight: bolder;
+    }
+
+    .step-container .step h3 {
+      font-size: 20px;
+      color: #ee0548;
+      padding: 7px;
+      font-family: sans-serif;
+    }
+
+    .step-container .step h5 {
+      font-size: 13px;
+      color: rgb(110, 104, 104);
+      padding: 3px 3px;
+      font-family: sans-serif;
+      text-align: left;
+    }
+
+    span {
+      color: #ffa500;
+      font-size: 25px;
+  }
+
+
+    @media (max-width: 800px) {
+      html {
+        font-size: 55%;
+      }
+
+      .navbar span {
+        padding: 0 5px;
+        font-size: 18px;
+      }
+
+      .navbar i {
+        padding: 0 5px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      html {
+        font-size: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay" data-overlay></div>
+
+  <!--
+  - MODAL
+-->
+
+  <div class="modal" data-modal>
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+      <button class="modal-close-btn" data-modal-close>
+        X
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="" alt="subscribe newsletter" width="400" height="400" />
+      </div>
+
+      <div class="newsletter">
+        <form action="#">
+          <div class="newsletter-header">
+            <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+
+            <p class="newsletter-desc">
+              Subscribe the <b>My-Store</b> to get latest products and
+              discount update.
+            </p>
+          </div>
+
+          <input type="email" name="email" class="email-field" placeholder="Email Address" required />
+
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+ 
+
+
+
+  <!--
+  - HEADER
+-->
+
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-facebook fa-lg"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-instagram fa-lg"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-twitter fa-lg"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-youtube fa-lg"></i>
+            </a>
+          </li>
+        </ul>
+
+        <div class="header-alert-news">
+          <p style="color: black;">
+            <b>Welcome To Dream Wedding Studio</b>
+
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <a href="#" class="header-logo"><span>D</span>ream-<span style="font-size: 23px;" >W</span>edding
+
+        </a>
+
+        <div class="header-search-container">
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category">
+            <a href="index.html" class="menu-title">Home</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="services.html" class="menu-title">Events</a>
+
+            <div class="dropdown-panel">
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="photoshot.html">Engagement</a>
+                </li>
+
+
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/wedding22.JPG" alt="headphone collection" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="photoshot.html">Haldi And Mehndi</a>
+                </li>
+
+
+
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/haldi-image9.JPG" alt="men's fashion" width="250" height="80" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="photoshot.html">Pre Wedding Shot</a>
+                </li>
+
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/pre-wedding1.jpg" alt="" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="services.html">Wedding</a>
+                </li>
+
+
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/wedding1.jpg" alt="mouse collection" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="menu-category">
+            <a href="photoshot.html" class="menu-title">PhotoShot</a>
+            <!-- 
+
+                          
+                          <ul class="dropdown-list">
+                              <li class="dropdown-item">
+                                  <a href="products.html">Smartwatch</a>
+                              </li>
+                              
+                              <li class="dropdown-item">
+                                  <a href="products.html">Formal Watch</a>
+                              </li>
+                              
+                              <li class="dropdown-item">
+                                  <a href="products.html">Speakers</a>
+                              </li>
+                              
+                              <li class="dropdown-item">
+                                  <a href="products.html">headphone</a>
+                              </li>
+                          </ul>
+                      -->
+          </li>
+
+          <li class="menu-category">
+            <a href="photoshot.html" class="menu-title">Pre-Wedding</a>
+
+
+
+          </li>
+
+          <li class="menu-category">
+            <a href="contact.html" class="menu-title">CONTACT</a>
+
+
+          </li>
+
+          <li class="menu-category">
+            <a href="video.html" class="menu-title">Videography</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn " data-mobile-menu-open-btn>
+        <a href="index.html" style="color: black;"><i class="fa-solid fa-house fa-lg" style="font-size: 18px;"></i></a>
+        <a href="index.html" style="font-size: 12px; color: black;font-weight: 700;  text-decoration:none;
+  font-family: math; padding: 0; ">Home</a>
+      </button>
+
+      <button class="action">
+        <a href="services.html" style="color: black;"><i class="fa-solid fa-calendar fa-lg"
+            style="font-size: 18px;"></i>
+          <a href="services.html" style="font-size: 12px; color: black;font-weight: 700; text-decoration:none;
+  font-family: math; padding: 0; ">Events</a>
+      </button>
+
+      <button class="action-btn">
+
+
+        <a href="photoshot.html" style="color: black;"><i class="fa-solid fa-camera fa-lg" style="font-size: 18px;"></i>
+          <a href="photoshot.html" style="font-size: 12px; color: black;font-weight: 700; text-decoration:none;
+  font-family: math; padding: 0; ">PhotoShot</a>
+      </button>
+
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <a href="video.html" style="color: black;"><i class="fa-solid fa-video fa-lg" style="font-size: 18px;"></i></a>
+        <a href="" style="font-size: 12px; color: black;font-weight: 700; text-decoration:none;
+  font-family: math; padding: 0; ">videoShot</a>
+
+      </button>
+
+      <button class="action-btn">
+        <a href="contact.html" style="color: black;"><i class="fa-solid fa-address-card fa-lg"
+            style="font-size: 18px;"></i>
+          <a href="" style="font-size: 12px; color: black;font-weight: 700;  text-decoration:none;
+  font-family: math; padding: 0; ">Contact</a>
+
+          <span class="count"></span>
+      </button>
+
+    </div>
+
+    <nav class="mobile-navigation-menu has-scrollbar " data-mobile-menu style="background: white;">
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <i class="fa-solid fa-xmark"></i>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <li class="menu-category">
+          <a href="products.html" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <a href="products.html">
+              <p class="menu-title">Men's</p>
+            </a>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"><i class="fa-solid fa-minus"></i></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list " data-accordion>
+            <li class="submenu-category">
+              <a href="products.html" class="submenu-title">Smartwatch</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="products.html" class="submenu-title">Formal Watch</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Headphones</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Speakers</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Watch</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+            <li class="panel-list-item">
+              <a href="products.html">RealMe</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Fastrack</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">BoAt</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Noise</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Apple</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Headphones</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+            <li class="panel-list-item">
+              <a href="products.html">boAt</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">RealMe</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Sony</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="#">Samsung</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="#">JBL</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <a href="contact.html">
+              <p class="menu-title">Contact</p>
+            </a>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+          </ul>
+        </li>
+
+        </div>
+    </nav>
+  </header>
+
+
+
+  <section class="contact">
+    <h1 class="heading">contact <span>me</span></h1>
+
+    <div class="row">
+      <div class="info-container">
+        <h2>Anyone Interested For The Pre-Wedding Shot, Wedding Shot, Photography, etc
+          Please Contact Me
+        </h2>
+
+        <div class="box-container">
+          <div class="box">
+            <i class="fas fa-phone"></i>
+            <div class="info">
+              <h3>Phone No</h3>
+              <p>7470321981</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <i class="fas fa-map"></i>
+            <div class="info">
+              <h3>Address</h3>
+              <p>Bhopal, india - 400104</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <i class="fas fa-envelope"></i>
+            <div class="info">
+              <h3>Email</h3>
+              <p>vivekmourya764@gmail.com</p>
+            </div>
+          </div>
+
+
+          <div class="box">
+            <i class="fa-solid fa-user"></i>
+            <div class="info">
+              <h3>Owner</h3>
+              <p>Vivek Mourya</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="share">
+          <i class="online-icon"><a href=""><img src="facebook.png" alt="" /></a></i>
+          <i class="online-icon"><a href=""><img src="twitter.png" alt="" /></a></i>
+          <i class="online-icon"><a href=""><img src="linkedin.png" alt="" /></a></i>
+          <i class="online-icon"><a href=""><img src="instagram.png" alt="" /></a></i>
+        </div>
+      </div>
+
+      <form action="">
+        <div class="inputbox">
+          <input type="text" name="name" id="name" placeholder=" Your Name" />
+          <input type="number" name="number" id="number" placeholder=" Your number" />
+        </div>
+
+        <div class="inputbox">
+          <input type="email" name="email" id="email" placeholder=" Your Email" />
+          <input type="text" name="phone" id="phone" placeholder=" Subject" />
+        </div>
+
+        <textarea name="" id="" cols="30" rows="10" placeholder=" Your Message"></textarea>
+
+        <input type="submit" value="send Message" class="btn" />
+      </form>
+    </div>
+  </section>
+
+  
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-e1450228-a8a8-4388-a2f0-284c203feb53" style="position: absolute;" ></div>
+
+
+
+</body>
+
+</html>
