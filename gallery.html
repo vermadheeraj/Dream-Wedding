@@ -38,191 +38,360 @@
             text-decoration: none;
         }
 
-        .hello {
-            opacity: 1 !important;
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .full {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
+        h1,
+        h2 {
+            font: inherit;
         }
 
-        .full .content {
-            background-color: rgba(0, 0, 0, 0.75) !important;
-            height: 100%;
-            width: 100%;
-            display: grid;
-        }
+        body {
+            font: 16px/1.2 'Poppins', sans-serif;
 
-        .full .content img {
-            left: 50%;
-            transform: translate3d(0, 0, 0);
-            animation: zoomin 1s ease;
-            max-width: 100%;
-            max-height: 100%;
-            margin: auto;
-        }
-
-        .byebye {
-            opacity: 0;
-        }
-
-        .byebye:hover {
-            transform: scale(0.2) !important;
         }
 
         .gallery {
-            display: grid;
-            grid-column-gap: 8px;
-            grid-row-gap: 8px;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            grid-auto-rows: 8px;
+            --anim-time--hi: 266ms;
+            --anim-time--med: 400ms;
+            --anim-time--lo: 600ms;
+
+            display: flex;
+            place-content: center;
+            max-width: clamp(30rem, 95%, 50rem);
+            width: max(22.5rem, 100%);
+            min-height: 100vh;
+            margin-inline: auto;
+            padding: clamp(0px, (30rem - 100vw) * 9999, 1rem);
+
         }
 
-        .gallery img {
+        .gallery__content--flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .gallery__content--flow>* {
+            flex-grow: 1;
+            flex-basis: calc((30rem - 100% - 1rem) * 999);
+        }
+
+        figure {
+            display: flex;
+            min-width: 14rem;
+            max-height: 16rem;
+            position: relative;
+            border-radius: .35rem;
+            box-shadow:
+                rgb(40, 40, 40, 0.1) 0px 2px 3px,
+                rgb(20, 20, 20, 0.2) 0px 5px 8px,
+                rgb(0, 0, 0, 0.25) 0px 10px 12px;
+            overflow: hidden;
+            transition: transform var(--anim-time--med) ease;
+        }
+
+        figure::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top,
+                    hsla(0, 0%, 0%, 0.8) 0%,
+                    hsla(0, 0%, 0%, 0.7) 12%,
+                    hsla(0, 0%, 0%, 0.2) 41.6%,
+                    hsla(0, 0%, 0%, 0.125) 50%,
+                    hsla(0, 0%, 0%, 0.01) 59.9%,
+                    hsla(0, 0%, 0%, 0) 100%);
+            opacity: 0;
+            transition-property: opacity, transform;
+            transition-duration: var(--anim-time--med), var(--anim-time--med);
+            transition-timing-function: ease, ease;
+            z-index: 4;
+        }
+
+        .header__caption {
+            z-index: 10;
+            position: absolute;
+            display: inline-flex;
+            flex-direction: column;
+            align-self: flex-end;
+            width: 100%;
+            gap: 0.5rem;
+            padding: 1rem;
+            justify-content: center;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform var(--anim-time--hi) linear,
+                opacity var(--anim-time--hi) linear;
+        }
+
+        figure:hover::before {
+            opacity: 0.8;
+        }
+
+        figure:hover .header__caption {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        figure:hover img {
+            transform: scale(1);
+        }
+
+        .title {
+            color: #fff;
+
+        }
+
+        .title--primary {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .title--secondary {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            transform: scale(1.15);
+            aspect-ratio: 16 / 13;
+            transition: 400ms ease-in-out;
+        }
+
+
+        .header .lead {
+            max-width: 620px;
+        }
+
+        /** Below CSS is completely optional **/
+
+        .gallery-container>a {
+            max-width: 200px;
+            max-height: 150px;
+            padding: 5px;
+            disply: inline-block;
+        }
+
+
+        .gallery .responsive-container-block {
+            min-height: 75px;
+            height: fit-content;
+            width: 100%;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 0px;
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+            justify-content: flex-start;
+        }
+
+        .gallery .responsive-container-block.bigContainer {
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+        }
+
+        .gallery .responsive-container-block.Container {
+            max-width: 1320px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            margin-top: 50px;
+            margin-right: auto;
+            margin-bottom: 50px;
+            margin-left: auto;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .gallery .overlay {
+            position: fixed;
+            background-image: initial;
+            background-position-x: initial;
+            background-position-y: initial;
+            background-size: initial;
+            background-repeat-x: initial;
+            background-repeat-y: initial;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: rgba(71, 69, 69, 0.7);
+            height: 100%;
+            width: 100%;
+            max-height: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: 100;
+            display: none;
+            padding-top: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .gallery .overlay-inner {
+            top: 50%;
+            right: 0px;
+            bottom: 0px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: initial;
+            background-position-x: initial;
+            background-position-y: initial;
+            background-size: initial;
+            background-repeat-x: initial;
+            background-repeat-y: initial;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: white;
+            width: fit-content;
+            padding-top: 35px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            opacity: 1;
+            max-width: 50%;
+            max-height: 85%;
+        }
+
+        .gallery .close {
+            position: absolute;
+            top: 9px;
+            right: 15px;
+            background-image: none;
+            background-position-x: initial;
+            background-position-y: initial;
+            background-size: initial;
+            background-repeat-x: initial;
+            background-repeat-y: initial;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: initial;
+            outline-color: initial;
+            outline-style: initial;
+            outline-width: 0px;
+            color: #474545;
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-top-style: initial;
+            border-right-style: initial;
+            border-bottom-style: initial;
+            border-left-style: initial;
+            border-top-color: initial;
+            border-right-color: initial;
+            border-bottom-color: initial;
+            border-left-color: initial;
+            border-image-source: initial;
+            border-image-slice: initial;
+            border-image-width: initial;
+            border-image-outset: initial;
+            border-image-repeat: initial;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .gallery .overlay-inner .hdImgs {
+            width: fit-content;
+            height: calc(80% - 55px);
+            display: flex;
+        }
+
+        .gallery .overlay-inner img {
+            max-height: 100%;
             max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 0 16px #333;
-            transition: all 1.5s ease;
+            transform: none;
         }
 
-        .gallery img:hover {
-            box-shadow: 0 0 32px #333;
-        }
-
-        .gallery .content {
-            padding: 4px;
-        }
-
-        .gallery .gallery-item {
-            transition: grid-row-start 300ms linear;
-            transition: transform 300ms ease;
-            transition: all 0.5s ease;
+        .gallery .close:hover {
             cursor: pointer;
         }
 
-        .gallery .gallery-item:hover {
-            transform: scale(1.025);
-        }
-        p{
-            font-size: 15px;
-            font-family: sans-serif;
-            margin: 10px;
-            color: gray;
-        }
-
-        span {
-            color: #ffa500;
-            font-size: 25px;
+        .gallery .project {
+            position: relative;
+            width: 33%;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
         }
 
-
-
-        @media (max-width: 600px) {
-            .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-            }
+        .gallery .btn-box {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
         }
 
-        @media (max-width: 400px) {
-            .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-            }
+        .gallery .project:hover .btn-box {
+            display: block;
         }
 
-        @-moz-keyframes zoomin {
-            0% {
-                max-width: 50%;
-                transform: rotate(-30deg);
-                filter: blur(4px);
+        .gallery .btn {
+            cursor: pointer;
+        }
+
+        .gallery .smallImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .gallery .project {
+                width: 50%;
             }
 
-            30% {
-                filter: blur(4px);
-                transform: rotate(-80deg);
-            }
-
-            70% {
-                max-width: 50%;
-                transform: rotate(45deg);
-            }
-
-            100% {
-                max-width: 100%;
-                transform: rotate(0deg);
+            .gallery .overlay-inner {
+                width: 90%;
             }
         }
 
-        @-webkit-keyframes zoomin {
-            0% {
-                max-width: 50%;
-                transform: rotate(-30deg);
-                filter: blur(4px);
+        @media (max-width: 500px) {
+            .gallery .project {
+                width: 100%;
+                padding-top: 10px;
+                padding-right: 0px;
+                padding-bottom: 10px;
+                padding-left: 0px;
             }
 
-            30% {
-                filter: blur(4px);
-                transform: rotate(-80deg);
+            .gallery .responsive-container-block.bigContainer {
+                padding-top: 10px;
+                padding-right: 20px;
+                padding-bottom: 10px;
+                padding-left: 20px;
             }
 
-            70% {
-                max-width: 50%;
-                transform: rotate(45deg);
-            }
-
-            100% {
-                max-width: 100%;
-                transform: rotate(0deg);
-            }
-        }
-
-        @-o-keyframes zoomin {
-            0% {
-                max-width: 50%;
-                transform: rotate(-30deg);
-                filter: blur(4px);
-            }
-
-            30% {
-                filter: blur(4px);
-                transform: rotate(-80deg);
-            }
-
-            70% {
-                max-width: 50%;
-                transform: rotate(45deg);
-            }
-
-            100% {
-                max-width: 100%;
-                transform: rotate(0deg);
-            }
-        }
-
-        @keyframes zoomin {
-            0% {
-                max-width: 50%;
-                transform: rotate(-30deg);
-                filter: blur(4px);
-            }
-
-            30% {
-                filter: blur(4px);
-                transform: rotate(-80deg);
-            }
-
-            70% {
-                max-width: 50%;
-                transform: rotate(45deg);
-            }
-
-            100% {
-                max-width: 100%;
-                transform: rotate(0deg);
+            .gallery .overlay-inner {
+                max-width: 90%;
             }
         }
     </style>
@@ -231,7 +400,7 @@
 <body>
     <div class="overlay" data-overlay></div>
 
-    
+
 
 
     <!--
@@ -279,8 +448,9 @@
 
         <div class="header-main">
             <div class="container">
-                <a href="#" class="header-logo"><span>D</span>ream-<span style="font-size: 23px;" >W</span>edding
-
+                <a href="#" class="header-logo"><span class="span"
+                        style="font-size: 24px; color: #ffa500;">D</span>ream-<span
+                        style="font-size: 24px; color: #ffa500;">W</span>edding
                 </a>
 
                 <div class="header-search-container">
@@ -293,76 +463,79 @@
 
         <nav class="desktop-navigation-menu">
             <div class="container">
-              <ul class="desktop-menu-category-list">
-                <li class="menu-category">
-                  <a href="index.html" class="menu-title">Home</a>
-                </li>
-      
-                <li class="menu-category">
-                  <a href="services.html" class="menu-title">Events</a>
-      
-                  <div class="dropdown-panel">
-                    <ul class="dropdown-panel-list">
-                      <li class="menu-title">
-                        <a href="photoshot.html">Engagement</a>
-                      </li>
-      
-      
-      
-                      <li class="panel-list-item">
-                        <a href="#">
-                          <img src="images/wedding22.JPG" alt="headphone collection" width="250" height="119" />
-                        </a>
-                      </li>
-                    </ul>
-      
-                    <ul class="dropdown-panel-list">
-                      <li class="menu-title">
-                        <a href="photoshot.html">Haldi And Mehndi</a>
-                      </li>
-      
-      
-      
-      
-                      <li class="panel-list-item">
-                        <a href="#">
-                          <img src="images/haldi-image9.JPG" alt="men's fashion" width="250" height="80" />
-                        </a>
-                      </li>
-                    </ul>
-      
-                    <ul class="dropdown-panel-list">
-                      <li class="menu-title">
-                        <a href="photoshot.html">Pre Wedding Shot</a>
-                      </li>
-      
-      
-                      <li class="panel-list-item">
-                        <a href="#">
-                          <img src="images/pre-wedding1.jpg" alt="" width="250" height="119" />
-                        </a>
-                      </li>
-                    </ul>
-      
-                    <ul class="dropdown-panel-list">
-                      <li class="menu-title">
-                        <a href="services.html">Wedding</a>
-                      </li>
-      
-      
-      
-                      <li class="panel-list-item">
-                        <a href="#">
-                          <img src="images/wedding1.jpg" alt="mouse collection" width="250" height="119" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-      
-                <li class="menu-category">
-                  <a href="photoshot.html" class="menu-title">PhotoShot</a>
-                  <!-- 
+                <ul class="desktop-menu-category-list">
+                    <li class="menu-category">
+                        <a href="index.html" class="menu-title">Home</a>
+                    </li>
+
+                    <li class="menu-category">
+                        <a href="services.html" class="menu-title">Events</a>
+
+                        <div class="dropdown-panel">
+                            <ul class="dropdown-panel-list">
+                                <li class="menu-title">
+                                    <a href="photoshot.html">Engagement</a>
+                                </li>
+
+
+
+                                <li class="panel-list-item">
+                                    <a href="#">
+                                        <img src="images/wedding22.JPG" alt="headphone collection" width="250"
+                                            height="119" />
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="dropdown-panel-list">
+                                <li class="menu-title">
+                                    <a href="photoshot.html">Haldi And Mehndi</a>
+                                </li>
+
+
+
+
+                                <li class="panel-list-item">
+                                    <a href="#">
+                                        <img src="images/haldi-image9.JPG" alt="men's fashion" width="250"
+                                            height="80" />
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="dropdown-panel-list">
+                                <li class="menu-title">
+                                    <a href="photoshot.html">Pre Wedding Shot</a>
+                                </li>
+
+
+                                <li class="panel-list-item">
+                                    <a href="#">
+                                        <img src="images/pre-wedding1.jpg" alt="" width="250" height="119" />
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="dropdown-panel-list">
+                                <li class="menu-title">
+                                    <a href="services.html">Wedding</a>
+                                </li>
+
+
+
+                                <li class="panel-list-item">
+                                    <a href="#">
+                                        <img src="images/wedding1.jpg" alt="mouse collection" width="250"
+                                            height="119" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu-category">
+                        <a href="photoshot.html" class="menu-title">PhotoShot</a>
+                        <!-- 
       
                                 
                                 <ul class="dropdown-list">
@@ -383,30 +556,30 @@
                                     </li>
                                 </ul>
                             -->
-                </li>
-      
-                <li class="menu-category">
-                  <a href="photoshot.html" class="menu-title">Pre-Wedding</a>
-      
-      
-      
-                </li>
-      
-                <li class="menu-category">
-                  <a href="contact.html" class="menu-title">CONTACT</a>
-      
-      
-                </li>
-      
-                <li class="menu-category">
-                  <a href="video.html" class="menu-title">Videography</a>
-                </li>
-      
-      
-              </ul>
+                    </li>
+
+                    <li class="menu-category">
+                        <a href="photoshot.html" class="menu-title">Pre-Wedding</a>
+
+
+
+                    </li>
+
+                    <li class="menu-category">
+                        <a href="contact.html" class="menu-title">CONTACT</a>
+
+
+                    </li>
+
+                    <li class="menu-category">
+                        <a href="video.html" class="menu-title">Videography</a>
+                    </li>
+
+
+                </ul>
             </div>
-          </nav>
-      
+        </nav>
+
 
         <div class="mobile-bottom-navigation">
             <button class="action-btn " data-mobile-menu-open-btn>
@@ -421,9 +594,9 @@
         font-family: math; padding: 0; ">Events</a>
             </button>
 
-           
 
-            
+
+
             <button class="action-btn">
 
 
@@ -432,7 +605,7 @@
         font-family: math; padding: 0; ">PhotoShot</a>
             </button>
 
-           
+
 
             <button class="action-btn" data-mobile-menu-open-btn>
                 <a href="gallery.html" style="color: black;"><i class="fa-solid fa-image fa-lg"></i></a>
@@ -442,7 +615,7 @@
             </button>
 
 
-        
+
 
             <button class="action-btn">
                 <a href="contact.html" style="color: black;"><i class="fa-solid fa-address-card fa-lg"></i>
@@ -591,15 +764,11 @@
     </header>
 
     <br>
-    <h2 class="title" style="font-size: 22px;" >Modern Indian Wedding Photography for the Discerning Couple</h2>
+    <h2 class="title" style="font-size: 22px;">Modern Indian Wedding Photography for the Discerning Couple</h2>
 
-    <p>We believe wedding photography should be unscripted, fun and timeless. On this page is a
-        small portfolio from the hundreds of weddings we've been at over the last ten years. Our style is contemporary,
-        fun and modern with an inclination towards moments in-between moments and classic portraiture
-    </p>
 
-    
-    <h1 class="heading">
+
+    <h1 class="heading" style="color: #ffa500; font-size: 25px ">
         <span>G</span>
         <span>a</span>
         <span>l</span>
@@ -607,127 +776,328 @@
         <span>e</span>
         <span>r</span>
         <span>y</span>
-  
-      </h1>
+
+    </h1>
+    <br>
 
 
+    <div style="background-image: url(./images/image1.jpg);  background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;" >
 
-    <div class="gallery" id="gallery">
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding-image1.jpg" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding16.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding11.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding12.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding13.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding14.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding15.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding16.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding17.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding18.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding19.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding20.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding21.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding22.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding23.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding24.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding25.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding26.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding27.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/shaadi1.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/shaadi2.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/shaadi2.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding-image1.jpg" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding-image2.jpg" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding-image3.jpg" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding-image4.jpg" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/wedding-image5.jpg" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/haldi-image1.JPG" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="images/haldi-image2.JPG" alt=""></div>
-        </div>
+        <br>
+        <main class="gallery gallery__content--flow" >
+        <figure>
+            <img src="images/shaadi1.JPG"
+                alt="A light brown, long-haired chihuahua sitting next to three rubber duckies. "
+                title="Photo by Giacomo Lucarini for Unsplash">
+            <figcaption class="header__caption" role="presentation">
 
-        <div class="gallery-item">
-            <div class="content"><img src="images/haldi-image3.JPG" alt=""></div>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/shaadi2.JPG" alt="A tabby kitten with green eyes. "
+                title="Photo by Sergey Semin for Unsplash">
+                <figcaption class="header__caption" role="presentation">
+
+            </figcaption>
+        </figure>
+        
+        <figure>
+            <img src="images/shaadi3.JPG" alt="A light brown puppy standing on a white and tan woven pet bed. "
+                title="Photo by Sergey Semin for Unsplash">
+                <figcaption class="header__caption" role="presentation">
+
+                </figcaption>
+            </figure>
+        <figure>
+            <img src="images/wedding15.JPG" alt="A light brown puppy standing on a white and tan woven pet bed. "
+                title="Photo by Sergey Semin for Unsplash">
+                <figcaption class="header__caption" role="presentation">
+                    
+            </figcaption>
+        </figure>
+        
+        <figure>
+            <img src="images/wedding10.JPG" alt="A light brown puppy standing on a white and tan woven pet bed. "
+            title="Photo by Sergey Semin for Unsplash">
+            <figcaption class="header__caption" role="presentation">
+                
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="images/wedding16.JPG" alt="A light brown puppy standing on a white and tan woven pet bed. "
+                title="Photo by Sergey Semin for Unsplash">
+            <figcaption class="header__caption" role="presentation">
+                
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="images/haldi-image8.JPG" alt="A light brown puppy standing on a white and tan woven pet bed. "
+                title="Photo by Sergey Semin for Unsplash">
+                <figcaption class="header__caption" role="presentation">
+                </figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/haldi-image9.JPG" alt="A light brown puppy standing on a white and tan woven pet bed. "
+                title="Photo by Sergey Semin for Unsplash">
+                <figcaption class="header__caption" role="presentation">
+                    
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/haldi-image10.JPG" alt="A light brown puppy standing on a white and tan woven pet bed. "
+                title="Photo by Sergey Semin for Unsplash">
+                <figcaption class="header__caption" role="presentation">
+                    
+                </figcaption>
+            </figure>
+
+        <figure>
+            <img src="images/wedding22.JPG" alt="A light brown puppy standing on a white and tan woven pet bed. "
+                title="Photo by Sergey Semin for Unsplash">
+                <figcaption class="header__caption" role="presentation">
+                    
+                </figcaption>
+            </figure>
+            <figure>
+            <img src="images/wedding27.JPG" alt="A light brown puppy standing on a white and tan woven pet bed. "
+            title="Photo by Sergey Semin for Unsplash">
+            <figcaption class="header__caption" role="presentation">
+
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="images/wedding24.JPG" alt="A light brown puppy standing on a white and tan woven pet bed. "
+            title="Photo by Sergey Semin for Unsplash">
+            <figcaption class="header__caption" role="presentation">
+
+            </figcaption>
+        </figure>
+        
+        <figure>
+            <img src="images/new-image3.jpeg" alt="A light brown puppy standing on a white and tan woven pet bed. "
+            title="Photo by Sergey Semin for Unsplash">
+            <figcaption class="header__caption" role="presentation">
+                
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="images/new-image5.jpeg" alt="A light brown puppy standing on a white and tan woven pet bed. "
+            title="Photo by Sergey Semin for Unsplash">
+            <figcaption class="header__caption" role="presentation">
+                
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="images/new-image6.jpeg" alt="A light brown puppy standing on a white and tan woven pet bed. "
+                title="Photo by Sergey Semin for Unsplash">
+            <figcaption class="header__caption" role="presentation">
+
+            </figcaption>
+        </figure>
+    </main>
+</div>
+
+    <div class="gallery" unique-script-id="w-w-dm-id">
+        <div class="responsive-container-block bigContainer">
+            <div class="responsive-container-block Container">
+                <div class="project">
+                    <img class="smallImage image-block"
+                        src="images/wedding7.JPG" style="height: 400px;" >
+                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                src="images/wedding8.JPG" style="height: 400px;">                            
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/wedding11.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp412.svg">
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/wedding14.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp413.svg">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/wedding25.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp414.svg">
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/wedding27.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp415.svg">
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/wedding23.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp411.svg">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/wedding20.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp412.svg">
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/wedding6.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp413.svg">
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/wedding21.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp415.svg">
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/haldi-image5.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp415.svg">
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/haldi-image6.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp415.svg">
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div class="project">
+                    <img class="smallImage"
+                    src="images/haldi-image7.JPG" style="height: 400px;" >                    <div class="overlay">
+                        <div class="overlay-inner">
+                            <button class="close">
+                                Close X
+                            </button>
+                            <div class="hdImgs">
+                                <img class="squareImg"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp415.svg">
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+
+            </div>
         </div>
-
-        <div class="gallery-item">
-            <div class="content"><img src="images/haldi-image4.JPG" alt=""></div>
-        </div>
-
-        <div class="gallery-item">
-            <div class="content"><img src="images/haldi-image6.JPG" alt=""></div>
-        </div>
-
-
-        <div class="gallery-item">
-            <div class="content"><img src="images/haldi-image5.JPG" alt=""></div>
-        </div>
-
-        <div class="gallery-item">
-            <div class="content"><img src="images/haldi-image7.JPG" alt=""></div>
-        </div>
-
     </div>
+    <br>
 
 
-    
-
-    
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- bootstrap -->
@@ -797,6 +1167,21 @@
 
 
 
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $(`[unique-script-id="w-w-dm-id"] .btn-box`).click(function () {
+                $(this).parent().children(".overlay").show();
+
+            });
+
+
+            $(`[unique-script-id="w-w-dm-id"] .close`).click(function () {
+                $(`[unique-script-id="w-w-dm-id"] .overlay`).hide();
+            });
+        });
     </script>
 </body>
 
