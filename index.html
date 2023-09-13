@@ -218,7 +218,7 @@
 \*-----------------------------------*/
 
     .container {
-      padding-inline: 15px 25px ;
+      padding-inline: 15px 25px;
     }
 
     .section {
@@ -1185,6 +1185,33 @@
       color: #ffa500;
       font-size: 25px;
     }
+
+    .text-js {
+      opacity: 0;
+    }
+
+    .cursor {
+      display: block;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: -5px;
+      width: 2px;
+      /* Change colour of Cursor Here */
+      background-color: white;
+      z-index: 1;
+      animation: flash 0.5s none infinite alternate;
+    }
+
+    @keyframes flash {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 
@@ -1554,11 +1581,19 @@
 
   <main>
 
+    <br>
+    <div class="type-js headline">
+      <h1 class="text-js" style="color: #ffa500; font-size:28px; padding: 5px " >Welcome To The Dream-Wedding Studio</h1>
+
+    </div>
+    <br>
+    <br>
+
     <!--
       - BANNER
     -->
 
-    <div class="banner">
+    <div class="banner" >
 
       <div class="container">
 
@@ -1763,8 +1798,8 @@
 
       <!-- Slider Section -->
 
-      
-      <h1 class="heading" style="color: #ffa500;" >
+
+      <h1 class="heading" style="color: #ffa500;">
         <span>B</span>
         <span>e</span>
         <span>s</span>
@@ -1775,12 +1810,12 @@
         <span>p</span>
         <span>l</span>
         <span>e</span>
-        
-        
+
+
       </h1>
 
       <h2 class="title"></h2>
-      
+
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -1828,21 +1863,21 @@
 
           <p class="section-subtitle has-before text-center">With Our</p>
 
-          <h1 class="heading" style="color: #ffa500;" >
+          <h1 class="heading" style="color: #ffa500;">
             <span>b</span>
-              <span>e</span>
-              <span>s</span>
-              <span>t</span>
-              <span>-</span>
-              <span>s</span>
-              <span>e</span>
-              <span>r</span>
-              <span>v</span>
-              <span>i</span>
-              <span>c</span>
-              <span>e</span>
-              
-             
+            <span>e</span>
+            <span>s</span>
+            <span>t</span>
+            <span>-</span>
+            <span>s</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>i</span>
+            <span>c</span>
+            <span>e</span>
+
+
           </h1>
 
           <br>
@@ -1853,7 +1888,7 @@
               <div class="service-card" style="--color: 343, 98%, 60%">
 
                 <div class="card-icon">
-                  <img src="images/engagement-icon.png" width="30" height="30" loading="lazy" alt="service icon">
+                  <img src="/images/engagement-icon.png" width="30" height="30" loading="lazy" alt="service icon">
                 </div>
 
                 <h3 class="h3">
@@ -1867,7 +1902,7 @@
               <div class="service-card" style="--color: 210, 100%, 53%">
 
                 <div class="card-icon">
-                  <img src="images/service-icon-5.png" width="30" height="30" loading="lazy" alt="service icon">
+                  <img src="/images/service-icon-5.png" width="30" height="30" loading="lazy" alt="service icon">
                 </div>
 
                 <h3 class="h3">
@@ -1881,7 +1916,7 @@
               <div class="service-card" style="--color: 17, 100%, 68%">
 
                 <div class="card-icon">
-                  <img src="images/icons8-wedding-dress-48.png" width="30" height="30" loading="lazy"
+                  <img src="/images/icons8-wedding-dress-48.png" width="30" height="30" loading="lazy"
                     alt="service icon">
                 </div>
 
@@ -1896,7 +1931,7 @@
               <div class="service-card" style="--color: 267, 76%, 57%">
 
                 <div class="card-icon">
-                  <img src="images/icons8-wedding-58.png" width="30" height="30" loading="lazy" alt="service icon">
+                  <img src="/images/icons8-wedding-58.png" width="30" height="30" loading="lazy" alt="service icon">
                 </div>
 
                 <h3 class="h3">
@@ -1924,7 +1959,7 @@
 
       <div class="product-featured">
 
-        <h1 class="heading" style="color: #ffa500;" >
+        <h1 class="heading" style="color: #ffa500;">
           <span>C</span>
           <span>u</span>
           <span>t</span>
@@ -1935,8 +1970,8 @@
           <span>p</span>
           <span>l</span>
           <span>e</span>
-          
-          
+
+
         </h1>
 
         <h2 class="title"></h2>
@@ -2078,7 +2113,7 @@
       <div class="blog">
 
         <div class="container">
-          <h1 class="heading" style="color: #ffa500;" >
+          <h1 class="heading" style="color: #ffa500;">
             <span>B</span>
             <span>e</span>
             <span>s</span>
@@ -2095,8 +2130,8 @@
             <span>h</span>
             <span>o</span>
             <span>t</span>
-            
-            
+
+
           </h1>
           <h2 class="title"></h2>
 
@@ -2105,7 +2140,7 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/wedding7.JPG" alt="" width="300" class="blog-banner">
+                <img src="/images/wedding7.JPG" alt="" width="300" class="blog-banner">
               </a>
 
               <div class="blog-content">
@@ -2239,7 +2274,7 @@
       <div class="blog">
 
         <div class="container">
-          <h1 class="heading" style="color: #ffa500;" >
+          <h1 class="heading" style="color: #ffa500;">
             <span>H</span>
             <span>a</span>
             <span>l</span>
@@ -2255,7 +2290,7 @@
             <span>h</span>
             <span>o</span>
             <span>t</span>
-            
+
           </h1>
 
           <h2 class="title"></h2>
@@ -2397,7 +2432,7 @@
       <div class="blog">
 
         <div class="container">
-          <h1 class="heading" style="color: #ffa500;" >
+          <h1 class="heading" style="color: #ffa500;">
             <span>M</span>
             <span>e</span>
             <span>h</span>
@@ -2415,9 +2450,9 @@
             <span>h</span>
             <span>o</span>
             <span>t</span>
-           
-            
-            
+
+
+
           </h1>
           <h2 class="title"></h2>
 
@@ -2560,8 +2595,8 @@
       <div class="blog">
 
         <div class="container">
-          <h1 class="heading" style="color: #ffa500;" >
-          <span>W</span>
+          <h1 class="heading" style="color: #ffa500;">
+            <span>W</span>
             <span>e</span>
             <span>d</span>
             <span>d</span>
@@ -2577,7 +2612,7 @@
             <span>a</span>
             <span>s</span>
             <span>e</span>
-            </h1>
+          </h1>
 
           <h2 class="title"></h2>
 
@@ -2782,25 +2817,25 @@
 
 
   <div class="containers">
-    <h1 class="heading" style="color: #ffa500;" >
+    <h1 class="heading" style="color: #ffa500;">
       <span>m</span>
-        <span>a</span>
-        <span>t</span>
-        <span>e</span>
-        <span>r</span>
-        <span>n</span>
-        <span>i</span>
-        <span>t</span>
-        <span>y</span>
-        <span>-</span>
-        <span>S</span>
-        <span>h</span>
-        <span>o</span>
-        <span>t</span>
-       
+      <span>a</span>
+      <span>t</span>
+      <span>e</span>
+      <span>r</span>
+      <span>n</span>
+      <span>i</span>
+      <span>t</span>
+      <span>y</span>
+      <span>-</span>
+      <span>S</span>
+      <span>h</span>
+      <span>o</span>
+      <span>t</span>
+
     </h1>
 
-        <h2 class="title"></h2>
+    <h2 class="title"></h2>
 
     <div class="slider mySwiper">
       <div class="image-items swiper-wrapper">
@@ -3185,6 +3220,42 @@
       });
 
     });
+
+
+    function autoType(elementClass, typingSpeed) {
+      var thhis = $(elementClass);
+      thhis.css({
+        "position": "relative",
+        "display": "inline-block"
+      });
+      thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+      thhis = thhis.find(".text-js");
+      var text = thhis.text().trim().split('');
+      var amntOfChars = text.length;
+      var newString = "";
+      thhis.text("|");
+      setTimeout(function () {
+        thhis.css("opacity", 1);
+        thhis.prev().removeAttr("style");
+        thhis.text("");
+        for (var i = 0; i < amntOfChars; i++) {
+          (function (i, char) {
+            setTimeout(function () {
+              newString += char;
+              thhis.text(newString);
+            }, i * typingSpeed);
+          })(i + 1, text[i]);
+        }
+      }, 1500);
+    }
+
+    $(document).ready(function () {
+      // Now to start autoTyping just call the autoType function with the 
+      // class of outer div
+      // The second paramter is the speed between each letter is typed.   
+      autoType(".type-js", 200);
+    });
+
   </script>
 
 </body>
