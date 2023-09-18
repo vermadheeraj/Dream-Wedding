@@ -218,7 +218,7 @@
 \*-----------------------------------*/
 
     .container {
-      padding-inline: 25px;
+      padding-inline: 23px;
     }
 
     .section {
@@ -1212,6 +1212,63 @@
         opacity: 0;
       }
     }
+
+    
+
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40vh;
+}
+
+.slider {
+	height: 250px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 80%;
+}
+
+.slider .slide-track {
+	-webkit-animation: scroll 30s linear infinite;
+	animation: scroll 30s linear infinite;
+	display: flex;
+	width: calc(250px * 14);
+}
+
+.slider .slide {
+	height: 300px;
+	width: 200px;
+}
+
+.slider .slide img {
+    width: 80%;
+	height: 100px;
+	border-radius: 10px;
+	
+}
+
+@-webkit-keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-250px * 7));
+	}
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-250px * 7));
+	}
+}
+
+
   </style>
 </head>
 
@@ -1264,18 +1321,22 @@
       </div>
     </div>
 
-    <div class="header-main">
-      <div class="container">
+    <div class="header-main" >
+      <div class="container" >
         <a href="#" class="header-logo"><span class="span">D</span>ream-<span
             style="font-size: 24px; color: #ffa500;">W</span>edding
         </a>
 
         <div class="header-search-container">
-
+          
 
         </div>
 
       </div>
+
+      
+
+
     </div>
 
     <nav class="desktop-navigation-menu">
@@ -2103,6 +2164,164 @@
       </div>
 
 
+      
+      <!--
+      - lehenge shots
+    -->
+
+    <div class="blog">
+
+      <div class="container">
+        <h1 class="heading" style="color: #ffa500;">
+          <span>L</span>
+          <span>e</span>
+          <span>h</span>
+          <span>e</span>
+          <span>n</span>
+          <span>g</span>
+          <span>a</span>
+          <span>-</span>
+          
+          <span>s</span>
+          <span>h</span>
+          <span>o</span>
+          <span>o</span>
+          <span>t</span>
+
+        </h1>
+
+        <h2 class="title"></h2>
+
+        <div class="blog-container has-scrollbar">
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="images/md6.JPG" alt="" width="300" class="blog-banner">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+              <a href="#">
+                <h3 class="blog-title"></h3>
+              </a>
+
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="images/md11.JPG" alt="" class="blog-banner" width="300">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+              <h3>
+                <a href="#" class="blog-title"></a>
+              </h3>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="images/md10.JPG" alt="" class="blog-banner" width="300">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+              <h3>
+                <a href="#" class="blog-title"></a>
+              </h3>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="images/md13.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                class="blog-banner" width="300">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+              <h3>
+                <a href="#" class="blog-title"></a>
+              </h3>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="images/md14.JPG" alt="" class="blog-banner" width="300">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+              <h3>
+                <a href="#" class="blog-title"></a>
+              </h3>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="blog-card">
+
+            <a href="#">
+              <img src="images/md6.JPG" alt="" class="blog-banner" width="300">
+            </a>
+
+            <div class="blog-content">
+
+              <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+              <h3>
+                <a href="#" class="blog-title"></a>
+              </h3>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
 
 
       <!--
@@ -2128,6 +2347,7 @@
             <span>g</span>
             <span>S</span>
             <span>h</span>
+            <span>o</span>
             <span>o</span>
             <span>t</span>
 
@@ -2289,6 +2509,7 @@
             <span>s</span>
             <span>h</span>
             <span>o</span>
+            <span>o</span>
             <span>t</span>
 
           </h1>
@@ -2300,7 +2521,7 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/haldi-image1.JPG" alt="" width="300" class="blog-banner">
+                <img src="images/md8.JPG" alt="" width="300" class="blog-banner">
               </a>
 
               <div class="blog-content">
@@ -2359,7 +2580,7 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/haldi-image12.JPG" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                <img src="images/md9.JPG" alt="Curbside fashion Trends: How to Win the Pickup Battle."
                   class="blog-banner" width="300">
               </a>
 
@@ -2380,7 +2601,7 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/haldi-image6.JPG" alt="" class="blog-banner" width="300">
+                <img src="images/haldi-image12.JPG" alt="" class="blog-banner" width="300">
               </a>
 
               <div class="blog-content">
@@ -2449,6 +2670,7 @@
             <span>s</span>
             <span>h</span>
             <span>o</span>
+            <span>o</span>
             <span>t</span>
 
 
@@ -2461,7 +2683,7 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/mddi5.JPG" alt="" width="300" class="blog-banner">
+                <img src="images/md1.JPG" alt="" width="300" class="blog-banner">
               </a>
 
               <div class="blog-content">
@@ -2500,7 +2722,7 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/mhdi3.JPG" alt="" class="blog-banner" width="300">
+                <img src="images/md3.JPG" alt="" class="blog-banner" width="300">
               </a>
 
               <div class="blog-content">
@@ -2583,6 +2805,78 @@
         </div>
 
       </div>
+
+
+      
+<!-- Slider Code -->
+
+<h1 class="heading" style="color: #ffa500;">
+ 
+  <span>b</span>
+  <span>e</span>
+  <span>s</span>
+  <span>t</span>
+  <span>-</span>
+  <span>c</span>
+  <span>a</span>
+  <span>m</span>
+  <span>e</span>
+  <span>r</span>
+  <span>a</span>
+ 
+</h1>
+<div class="wrapper">
+	<div class="slider">
+		<div class="slide-track">
+		
+			<!-- Img Code -->
+			<div class="slide">
+				<img src="images/sony (1).png" />
+			</div>
+			
+      <div class="slide">
+				<img src="images/canon.png" />
+			</div>
+			
+      <div class="slide">
+				<img src="images/nikon.png" />
+			</div>
+			
+      <div class="slide">
+				<img src="images/panasonic (1).png" />
+			</div>
+			
+			<div class="slide">
+				<img src="images/kodak.png" />
+			</div>
+			<div class="slide">
+				<img src="images/sony.png" />
+			</div>
+			
+      <div class="slide">
+				<img src="images/canon.png" />
+			</div>
+			
+      <div class="slide">
+				<img src="images/nikon.png" />
+			</div>
+			
+      <div class="slide">
+				<img src="images/panasonic (1).png" />
+			</div>
+			
+			<div class="slide">
+				<img src="images/kodak.png" />
+			</div>
+			
+			
+			<!-- Img Code End -->
+			
+		</div>
+	</div>
+</div>
+
+
 
 
 
