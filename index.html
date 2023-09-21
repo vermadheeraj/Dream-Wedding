@@ -31,12 +31,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
 
 
   <style>
     body {
       background-color: white;
+      overflow-x: hidden;
+      padding: 6px;
     }
 
     a {
@@ -156,9 +159,7 @@
       text-decoration: none;
     }
 
-    img {
-      height: auto;
-    }
+
 
     input,
     button {
@@ -1213,62 +1214,75 @@
       }
     }
 
-    
 
 
-.wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 40vh;
-}
 
-.slider {
-	height: 200px;
-	margin: auto;
-	overflow: hidden;
-	position: relative;
-	width: 80%;
-}
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40vh;
+    }
 
-.slider .slide-track {
-	-webkit-animation: scroll 30s linear infinite;
-	animation: scroll 30s linear infinite;
-	display: flex;
-	width: calc(250px * 14);
-}
+    .slider {
+      height: 200px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      width: 80%;
+    }
 
-.slider .slide {
-	height: 300px;
-	width: 200px;
-}
+    .slider .slide-track {
+      -webkit-animation: scroll 30s linear infinite;
+      animation: scroll 30s linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+    }
 
-.slider .slide img {
-    width: 80%;
-	height: 100px;
-	border-radius: 10px;
-	
-}
+    .slider .slide {
+      height: 300px;
+      width: 200px;
+    }
 
-@-webkit-keyframes scroll {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(calc(-250px * 7));
-	}
-}
+    .slider .slide img {
+      width: 80%;
+      height: 100px;
+      border-radius: 10px;
 
-@keyframes scroll {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(calc(-250px * 7));
-	}
-}
+    }
+
+    @-webkit-keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-250px * 7));
+      }
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-250px * 7));
+      }
+    }
 
 
+    div.scroll-container {
+      background-color: whitesmoke;
+      overflow: auto;
+      white-space: nowrap;
+      padding: 10px;
+      margin: 15px;
+    }
+
+    div.scroll-container img {
+      padding: 10px;
+    }
   </style>
 </head>
 
@@ -1321,20 +1335,20 @@
       </div>
     </div>
 
-    <div class="header-main" >
-      <div class="container" >
+    <div class="header-main">
+      <div class="container">
         <a href="#" class="header-logo"><span class="span">D</span>ream-<span
             style="font-size: 24px; color: #ffa500;">W</span>edding
         </a>
 
         <div class="header-search-container">
-          
+
 
         </div>
 
       </div>
 
-      
+
 
 
     </div>
@@ -1644,7 +1658,7 @@
 
     <br>
     <div class="type-js headline">
-      <h1 class="text-js" style="color: #ffa500; font-size:28px; padding: 5px " >Welcome To The Dream-Wedding Studio</h1>
+      <h1 class="text-js" style="color: #ffa500; font-size:28px; padding: 5px ">Welcome To The Dream-Wedding Studio</h1>
 
     </div>
     <br>
@@ -1654,7 +1668,7 @@
       - BANNER
     -->
 
-    <div class="banner" >
+    <div class="banner">
 
       <div class="container">
 
@@ -2070,26 +2084,20 @@
                 <button class="add-cart-btn">Rahul Weds Shivani</button>
 
                 <div class="showcase-status">
-                  <div class="wrapper">
-                    <p>
-                      already sold: <b>20</b>
-                    </p>
 
-                    <p>
-                      Team: <b>10</b>
-                    </p>
+                  <div class="countdown">
+                    <p>"Every couple has a unique story to tell, let it be an arranged or love marriage. Our wedding
+                      photographers in Kochi capture it in the best possible style so that they can cherish those
+                      priceless moments even after several years,</p>
+
                   </div>
+
+
 
                   <div class="showcase-status-bar"></div>
                 </div>
 
                 <div class="countdown-box">
-
-
-                  <div class="countdown">
-
-
-                  </div>
 
                 </div>
 
@@ -2164,195 +2172,32 @@
       </div>
 
 
-      
+
       <!--
       - lehenge shots
     -->
-
-    <div class="blog">
-
-      <div class="container">
-        <h1 class="heading" style="color: #ffa500;">
-          <span>L</span>
-          <span>e</span>
-          <span>h</span>
-          <span>e</span>
-          <span>n</span>
-          <span>g</span>
-          <span>a</span>
-          <span>-</span>
-          
-          <span>s</span>
-          <span>h</span>
-          <span>o</span>
-          <span>o</span>
-          <span>t</span>
-
-        </h1>
-
-        <h2 class="title"></h2>
-
-        <div class="blog-container has-scrollbar">
-
-          <div class="blog-card">
-
-            <a href="#">
-              <img src="images/md6.JPG" alt="" width="300" class="blog-banner">
-            </a>
-
-            <div class="blog-content">
-
-              <a href="#" class="blog-category">Haldi PhotoShot</a>
-
-              <a href="#">
-                <h3 class="blog-title"></h3>
-              </a>
-
-
-            </div>
-
-          </div>
-
-          <div class="blog-card">
-
-            <a href="#">
-              <img src="images/md11.JPG" alt="" class="blog-banner" width="300">
-            </a>
-
-            <div class="blog-content">
-
-              <a href="#" class="blog-category">Haldi PhotoShot</a>
-
-              <h3>
-                <a href="#" class="blog-title"></a>
-              </h3>
-
-
-
-            </div>
-
-          </div>
-
-          <div class="blog-card">
-
-            <a href="#">
-              <img src="images/md10.JPG" alt="" class="blog-banner" width="300">
-            </a>
-
-            <div class="blog-content">
-
-              <a href="#" class="blog-category">Haldi PhotoShot</a>
-
-              <h3>
-                <a href="#" class="blog-title"></a>
-              </h3>
-
-
-
-            </div>
-
-          </div>
-
-          <div class="blog-card">
-
-            <a href="#">
-              <img src="images/md13.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle."
-                class="blog-banner" width="300">
-            </a>
-
-            <div class="blog-content">
-
-              <a href="#" class="blog-category">Haldi PhotoShot</a>
-
-              <h3>
-                <a href="#" class="blog-title"></a>
-              </h3>
-
-
-
-            </div>
-
-          </div>
-
-          <div class="blog-card">
-
-            <a href="#">
-              <img src="images/md14.JPG" alt="" class="blog-banner" width="300">
-            </a>
-
-            <div class="blog-content">
-
-              <a href="#" class="blog-category">Haldi PhotoShot</a>
-
-              <h3>
-                <a href="#" class="blog-title"></a>
-              </h3>
-
-
-
-            </div>
-
-          </div>
-
-          <div class="blog-card">
-
-            <a href="#">
-              <img src="images/md6.JPG" alt="" class="blog-banner" width="300">
-            </a>
-
-            <div class="blog-content">
-
-              <a href="#" class="blog-category">Haldi PhotoShot</a>
-
-              <h3>
-                <a href="#" class="blog-title"></a>
-              </h3>
-
-
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-
-
-      <!--
-        Frist Blog
-      -->
-
 
       <div class="blog">
 
         <div class="container">
           <h1 class="heading" style="color: #ffa500;">
-            <span>B</span>
+            <span>L</span>
             <span>e</span>
-            <span>s</span>
-            <span>t</span>
-            <span>-</span>
-            <span>W</span>
+            <span>h</span>
             <span>e</span>
-            <span>d</span>
-            <span>d</span>
-            <span>i</span>
             <span>n</span>
             <span>g</span>
-            <span>S</span>
+            <span>a</span>
+            <span>-</span>
+
+            <span>s</span>
             <span>h</span>
             <span>o</span>
             <span>o</span>
             <span>t</span>
 
-
           </h1>
+
           <h2 class="title"></h2>
 
           <div class="blog-container has-scrollbar">
@@ -2360,12 +2205,35 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/wedding7.JPG" alt="" width="300" class="blog-banner">
+                <img src="images/md6.JPG" alt="" width="300" class="blog-banner">
               </a>
 
               <div class="blog-content">
 
-                <a href="#" class="blog-category">Wedding PhotoShot</a>
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <a href="#">
+                  <h3 class="blog-title"></h3>
+                </a>
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/md11.JPG" alt="" class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
 
 
 
@@ -2376,12 +2244,18 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/wedding-image2.jpg" alt="" width="300" class="blog-banner">
+                <img src="images/md10.JPG" alt="" class="blog-banner" width="300">
               </a>
 
               <div class="blog-content">
 
-                <a href="#" class="blog-category">Wedding PhotoShot</a>
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
 
               </div>
 
@@ -2390,12 +2264,19 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/wedding12.JPG" alt="" width="300" class="blog-banner">
+                <img src="images/md13.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                  class="blog-banner" width="300">
               </a>
 
               <div class="blog-content">
 
-                <a href="#" class="blog-category">Wedding PhotoShot</a>
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
 
               </div>
 
@@ -2404,12 +2285,18 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/wedding27.JPG" alt="" width="300" class="blog-banner">
+                <img src="images/md14.JPG" alt="" class="blog-banner" width="300">
               </a>
 
               <div class="blog-content">
 
-                <a href="#" class="blog-category">Wedding PhotoShot</a>
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
 
               </div>
 
@@ -2418,72 +2305,73 @@
             <div class="blog-card">
 
               <a href="#">
-                <img src="images/wedding14.JPG" alt="" object-fit="contain" height="400px" width="300"
-                  class="blog-banner">
+                <img src="images/md6.JPG" alt="" class="blog-banner" width="300">
               </a>
 
               <div class="blog-content">
 
-                <a href="#" class="blog-category">Wedding PhotoShot</a>
+                <a href="#" class="blog-category">Haldi PhotoShot</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+
 
               </div>
 
             </div>
-
-            <div class="blog-card">
-
-              <a href="#">
-                <img src="images//wedding-image2.jpg" alt="" object-fit="contain" height="400px" width="300"
-                  class="blog-banner">
-              </a>
-
-              <div class="blog-content">
-
-                <a href="#" class="blog-category">Wedding PhotoShot</a>
-
-              </div>
-
-            </div>
-
-            <div class="blog-card">
-
-              <a href="#">
-                <img src="images/wedding-image3.jpg" alt="" object-fit="contain" height="400px" width="300"
-                  class="blog-banner">
-              </a>
-
-              <div class="blog-content">
-
-                <a href="#" class="blog-category">Wedding PhotoShot</a>
-
-              </div>
-
-            </div>
-            <div class="blog-card">
-
-              <a href="#">
-                <img src="images/wedding-image4.jpg" alt="" object-fit="contain" height="400px" width="300"
-                  class="blog-banner">
-              </a>
-
-              <div class="blog-content">
-
-                <a href="#" class="blog-category">Wedding PhotoShot</a>
-
-              </div>
-
-            </div>
-
 
           </div>
+
         </div>
+
       </div>
 
 
+      <br>
+      <section>
+
+        <br>
+        <h1 class="heading" style="color: #ffa500;">
+          <span>B</span>
+          <span>e</span>
+          <span>s</span>
+          <span>t</span>
+          <span>-</span>
+          <span>W</span>
+          <span>e</span>
+          <span>d</span>
+          <span>d</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+          <span>S</span>
+          <span>h</span>
+          <span>o</span>
+          <span>o</span>
+          <span>t</span>
+
+
+        </h1>
+
+        <div class="scroll-container">
+          <img src="images/wedding6.JPG" alt="Cinque Terre" height="300px">
+          <img src="images/wedding-image2.jpg" alt="Forest" height="300px">
+          <img src="images/wedding12.JPG" alt="Cinque Terre" height="300px">
+          <img src="images/wedding27.JPG" alt="Cinque Terre" height="300px">
+          <img src="images/wedding14.JPG" alt="Cinque Terre" height="300px">
+          <img src="images/md14.JPG" alt="Forest" height="300px">
+          <img src="images/wedding-image4.jpg" alt="Forest" height="300px">
+          <img src="images/wedding12.JPG" alt="Cinque Terre" height="300px">
+          <img src="images/wedding27.JPG" alt="Cinque Terre" height="300px">
+          <img src="images/wedding21.JPG" alt="Cinque Terre" height="300px">
 
 
 
-
+        </div>
+      </section>
+      <br>
 
 
 
@@ -2807,74 +2695,80 @@
       </div>
 
 
-      
-<!-- Slider Code -->
 
-<h1 class="heading" style="color: #ffa500;">
- 
-  <span>b</span>
-  <span>e</span>
-  <span>s</span>
-  <span>t</span>
-  <span>-</span>
-  <span>c</span>
-  <span>a</span>
-  <span>m</span>
-  <span>e</span>
-  <span>r</span>
-  <span>a</span>
- 
-</h1>
-<div class="wrapper">
-	<div class="slider">
-		<div class="slide-track">
-		
-			<!-- Img Code -->
-			<div class="slide">
-				<img src="images/sony (1).png" />
-			</div>
-			
-      <div class="slide">
-				<img src="images/canon.png" />
-			</div>
-			
-      <div class="slide">
-				<img src="images/nikon.png" />
-			</div>
-			
-      <div class="slide">
-				<img src="images/panasonic (1).png" />
-			</div>
-			
-			<div class="slide">
-				<img src="images/kodak.png" />
-			</div>
-			<div class="slide">
-				<img src="images/sony.png" />
-			</div>
-			
-      <div class="slide">
-				<img src="images/canon.png" />
-			</div>
-			
-      <div class="slide">
-				<img src="images/nikon.png" />
-			</div>
-			
-      <div class="slide">
-				<img src="images/panasonic (1).png" />
-			</div>
-			
-			<div class="slide">
-				<img src="images/kodak.png" />
-			</div>
-			
-			
-			<!-- Img Code End -->
-			
-		</div>
-	</div>
-</div>
+      <!-- Slider Code -->
+
+      <h1 class="heading" style="color: #ffa500;">
+
+        <span>b</span>
+        <span>e</span>
+        <span>s</span>
+        <span>t</span>
+        <span>-</span>
+        <span>c</span>
+        <span>a</span>
+        <span>m</span>
+        <span>e</span>
+        <span>r</span>
+        <span>a</span>
+
+      </h1>
+      <div class="wrapper">
+        <div class="slider">
+          <div class="slide-track">
+
+            <!-- Img Code -->
+            <div class="slide">
+              <img src="images/85194.jpg" />
+            </div>
+
+            <div class="slide">
+              <img src="images/canon-logo.svg" />
+            </div>
+
+            <div class="slide">
+              <img src="images/nikon.svg" />
+            </div>
+
+            <div class="slide">
+              <img src="images/panasonic (1).png" />
+            </div>
+
+            <div class="slide">
+              <img src="images/apple-11.svg" />
+            </div>
+            <div class="slide">
+              <img src="images/sony.svg" />
+            </div>
+
+            <div class="slide">
+              <img src="images/canon.png" />
+            </div>
+
+            <div class="slide">
+              <img src="images/nikon.png" />
+            </div>
+            
+            <div class="slide">
+              <img src="images/panasonic (1).png" />
+            </div>
+
+            <div class="slide">
+              <img src="images/nikon.svg" />
+            </div>
+
+            <div class="slide">
+              <img src="images/canon-logo.svg" />
+            </div>
+
+
+
+            <!-- Img Code End -->
+
+          </div>
+        </div>
+      </div>
+
 
 
 
