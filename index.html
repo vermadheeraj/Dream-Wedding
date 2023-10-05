@@ -11,6 +11,8 @@
     - favicon
   -->
   <link rel="shortcut icon" href="" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
 
   <!--
     - custom css link
@@ -1283,6 +1285,13 @@
     div.scroll-container img {
       padding: 10px;
     }
+
+    a:hover{
+      color: #ffa500;
+    }
+    .fa-solid:hover{
+      color: #ffa500;
+    }
   </style>
 </head>
 
@@ -1473,14 +1482,14 @@
 
     <div class="mobile-bottom-navigation">
       <button class="action-btn " data-mobile-menu-open-btn>
-        <a href="index.html" style="color: black;"><i class="fa-solid fa-house fa-lg"></i></a>
-        <a href="index.html" style="font-size: 12px; color: black;font-weight: 700;
+        <a href="index.html" style="color: black;  padding:0;"><i class="fa-solid fa-house fa-lg"></i></a>
+        <a href="index.html" style="font-size: 13px; color: black;font-weight: 700;
       font-family: math; padding: 0; ">Home</a>
       </button>
 
       <button class="action">
-        <a href="services.html" style="color: black;"><i class="fa-solid fa-briefcase fa-lg"></i>
-          <a href="services.html" style="font-size: 12px; color: black;font-weight: 700;
+        <a href="services.html" style="color: black;  padding:0;"><i class="fa-solid fa-briefcase fa-lg"></i>
+          <a href="services.html" style="font-size: 13px; color: black;font-weight: 700;
       font-family: math; padding: 0; ">Events</a>
       </button>
 
@@ -1490,16 +1499,16 @@
       <button class="action-btn">
 
 
-        <a href="photoshot.html" style="color: black;"><i class="fa-solid fa-camera fa-lg"></i>
-          <a href="photoshot.html" style="font-size: 12px; color: black;font-weight: 700;
+        <a href="photoshot.html" style="color: black; padding:0;"><i class="fa-solid fa-camera fa-lg"></i>
+          <a href="photoshot.html" style="font-size: 13px; color: black;font-weight: 700;
       font-family: math; padding: 0; ">PhotoShot</a>
       </button>
 
 
 
       <button class="action-btn" data-mobile-menu-open-btn>
-        <a href="gallery.html" style="color: black;"><i class="fa-solid fa-image fa-lg"></i></a>
-        <a href="" style="font-size: 12px; color: black;font-weight: 700;
+        <a href="gallery.html" style="color: black; padding:0;"><i class="fa-solid fa-image fa-lg"></i></a>
+        <a href="" style="font-size: 13px; color: black;font-weight: 700;
       font-family: math; padding: 0; ">Gallery</a>
 
       </button>
@@ -1508,14 +1517,15 @@
 
 
       <button class="action-btn">
-        <a href="contact.html" style="color: black;"><i class="fa-solid fa-address-card fa-lg"></i>
-          <a href="" style="font-size: 12px; color: black;font-weight: 700;
+        <a href="contact.html" style="color: black; padding:0;"><i class="fa-solid fa-address-card fa-lg"></i>
+          <a href="" style="font-size: 13px; color: black;font-weight: 700;
       font-family: math; padding: 0; ">Contact</a>
 
           <span class="count"></span>
       </button>
 
     </div>
+
     <nav class="mobile-navigation-menu has-scrollbar " data-mobile-menu style="background: white;">
       <div class="menu-top">
         <h2 class="menu-title">Menu</h2>
@@ -1680,9 +1690,9 @@
 
             <div class="banner-content">
 
-              <p class="banner-subtitle">Weeding Shot</p>
+              <p class="banner-subtitle"  data-aos="fade-left">Weeding Shot</p>
 
-              <h2 class="banner-title">May the love and happiness
+              <h2 class="banner-title"  data-aos="fade-right">May the love and happiness
 
 
             </div>
@@ -1758,18 +1768,18 @@
             <div class="category-item">
 
               <div class="category-img-box">
-                <img src="images/wedding26.jpg" alt="dress & frock" width="30">
+                <img src="images/wedding26.jpg" alt="dress & frock" width="30" data-aos="fade-down">
               </div>
 
               <div class="category-content-box">
 
                 <div class="category-content-flex">
-                  <h3 class="category-item-title">Pre Wedding PhotoShot</h3>
+                  <h3 class="category-item-title" data-aos="fade-down">Pre Wedding PhotoShot</h3>
 
-                  <p class="category-item-amount">(50+)</p>
+                  <p class="category-item-amount" data-aos="fade-up">(50+)</p>
                 </div>
 
-                <a href="photoshot.html" class="category-btn">Show all</a>
+                <a href="photoshot.html" class="category-btn" data-aos="fade-up">Show all</a>
 
               </div>
 
@@ -1874,7 +1884,7 @@
       <!-- Slider Section -->
 
 
-      <h1 class="heading" style="color: #ffa500;">
+      <h1 class="heading" style="color: #ffa500;"  data-aos="fade-down">
         <span>B</span>
         <span>e</span>
         <span>s</span>
@@ -1938,7 +1948,7 @@
 
           <p class="section-subtitle has-before text-center">With Our</p>
 
-          <h1 class="heading" style="color: #ffa500;">
+          <h1 class="heading" style="color: #ffa500;"  data-aos="fade-down">
             <span>b</span>
             <span>e</span>
             <span>s</span>
@@ -1959,11 +1969,11 @@
 
           <ul class="grid-list">
 
-            <li>
+            <li  data-aos="fade-down">
               <div class="service-card" style="--color: 343, 98%, 60%">
 
                 <div class="card-icon">
-                  <img src="images/engagement-icon.png" width="30" height="30" loading="lazy" alt="service icon">
+                  <img src="images/engagement-icon.png" width="30" height="30" loading="lazy" alt="service icon" data-aos="fade-down">
                 </div>
 
                 <h3 class="h3">
@@ -1973,11 +1983,11 @@
               </div>
             </li>
 
-            <li>
+            <li  data-aos="fade-in">
               <div class="service-card" style="--color: 210, 100%, 53%">
 
                 <div class="card-icon">
-                  <img src="images/service-icon-5.png" width="30" height="30" loading="lazy" alt="service icon">
+                  <img src="images/service-icon-5.png" width="30" height="30" loading="lazy" alt="service icon" data-aos="fade-up">
                 </div>
 
                 <h3 class="h3">
@@ -1987,11 +1997,11 @@
               </div>
             </li>
 
-            <li>
+            <li  data-aos="fade-down">
               <div class="service-card" style="--color: 17, 100%, 68%">
 
                 <div class="card-icon">
-                  <img src="images/icons8-wedding-dress-48.png" width="30" height="30" loading="lazy"
+                  <img src="images/icons8-wedding-dress-48.png" width="30" height="30" loading="lazy" data-aos="fade-down"
                     alt="service icon">
                 </div>
 
@@ -2002,11 +2012,11 @@
               </div>
             </li>
 
-            <li>
+            <li  data-aos="fade-in">
               <div class="service-card" style="--color: 267, 76%, 57%">
 
                 <div class="card-icon">
-                  <img src="images/icons8-wedding-58.png" width="30" height="30" loading="lazy" alt="service icon">
+                  <img src="images/icons8-wedding-58.png" width="30" height="30" loading="lazy" alt="service icon" data-aos="fade-up">
                 </div>
 
                 <h3 class="h3">
@@ -2034,7 +2044,7 @@
 
       <div class="product-featured">
 
-        <h1 class="heading" style="color: #ffa500;">
+        <h1 class="heading" style="color: #ffa500;"  data-aos="fade-down">
           <span>C</span>
           <span>u</span>
           <span>t</span>
@@ -2073,19 +2083,19 @@
 
 
 
-                <p class="showcase-desc">
+                <p class="showcase-desc"  data-aos="fade-left">
                   Congratulations on your marriage and best wishes for a happy and fulfilling future.
                 </p>
-                <a href="#">
+                <a href="#"  data-aos="fade-right">
                   <h3 class="showcase-title">Cute Couple</h3>
                 </a>
 
 
-                <button class="add-cart-btn">Rahul Weds Shivani</button>
+                <button class="add-cart-btn"  data-aos="fade-left">Rahul Weds Shivani</button>
 
                 <div class="showcase-status">
 
-                  <div class="countdown">
+                  <div class="countdown"  data-aos="fade-right">
                     <p>"Every couple has a unique story to tell, let it be an arranged or love marriage. Our wedding
                       photographers in Kochi capture it in the best possible style so that they can cherish those
                       priceless moments even after several years,</p>
@@ -2180,7 +2190,7 @@
       <div class="blog">
 
         <div class="container">
-          <h1 class="heading" style="color: #ffa500;">
+          <h1 class="heading" style="color: #ffa500;"  data-aos="fade-down">
             <span>L</span>
             <span>e</span>
             <span>h</span>
@@ -2200,7 +2210,7 @@
 
           <h2 class="title"></h2>
 
-          <div class="blog-container has-scrollbar">
+          <div class="blog-container has-scrollbar"  data-aos="fade-down">
 
             <div class="blog-card">
 
@@ -2333,7 +2343,7 @@
       <section>
 
         <br>
-        <h1 class="heading" style="color: #ffa500;">
+        <h1 class="heading" style="color: #ffa500;"  data-aos="fade-down">
           <span>B</span>
           <span>e</span>
           <span>s</span>
@@ -2355,7 +2365,7 @@
 
         </h1>
 
-        <div class="scroll-container">
+        <div class="scroll-container" data-aos="fade-up">
           <img src="images/wedding6.JPG" alt="Cinque Terre" height="300px">
           <img src="images/wedding-image2.jpg" alt="Forest" height="300px">
           <img src="images/wedding12.JPG" alt="Cinque Terre" height="300px">
@@ -2382,7 +2392,7 @@
       <div class="blog">
 
         <div class="container">
-          <h1 class="heading" style="color: #ffa500;">
+          <h1 class="heading" style="color: #ffa500;"  data-aos="fade-down">
             <span>H</span>
             <span>a</span>
             <span>l</span>
@@ -2541,7 +2551,7 @@
       <div class="blog">
 
         <div class="container">
-          <h1 class="heading" style="color: #ffa500;">
+          <h1 class="heading" style="color: #ffa500;"  data-aos="fade-down">
             <span>M</span>
             <span>e</span>
             <span>h</span>
@@ -2698,7 +2708,7 @@
 
       <!-- Slider Code -->
 
-      <h1 class="heading" style="color: #ffa500;">
+      <h1 class="heading" style="color: #ffa500;"  data-aos="fade-down">
 
         <span>b</span>
         <span>e</span>
@@ -2783,7 +2793,7 @@
       <div class="blog">
 
         <div class="container">
-          <h1 class="heading" style="color: #ffa500;">
+          <h1 class="heading" style="color: #ffa500;"  data-aos="fade-down">
             <span>W</span>
             <span>e</span>
             <span>d</span>
@@ -3005,7 +3015,7 @@
 
 
   <div class="containers">
-    <h1 class="heading" style="color: #ffa500;">
+    <h1 class="heading" style="color: #ffa500;"  data-aos="fade-down">
       <span>m</span>
       <span>a</span>
       <span>t</span>
@@ -3443,7 +3453,18 @@
       // The second paramter is the speed between each letter is typed.   
       autoType(".type-js", 200);
     });
+  </script>
 
+  
+  <!--------javascript for toggle menu-------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+
+    AOS.init({
+      delay: 400,
+      duration: 1000
+    })
   </script>
 
 </body>
